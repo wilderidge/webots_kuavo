@@ -520,12 +520,12 @@ Webots_PR2_Path_Planning/
    python flask_server.py
    ```
    
-   服务器默认将在端口 **http://127.0.0.1:5000** 运行。
+   服务器默认将在端口http://127.0.0.1:5000上运行。
 
 5. **配置和运行Webots仿真:**
 
-   - 打开Webots软件（导航到`..\Webots\msys64\mingw64\bin`路径下终端输入`./webots --stream`）。
-   - 加载机器人仿真场景（包含PR2机器人的场景，此时web端的W3D页面地址为**http://localhost:1234/index.html**）。
+   - 打开Webots软件：导航到`..\Webots\msys64\mingw64\bin`路径下终端输入`./webots --stream`。
+   - 加载机器人仿真场景：包含PR2机器人的场景，此时web端的W3D页面地址为http://localhost:1234/index.html。
    - 确保机器人控制器（`BFS_exercise_1.py`）已经配置为该机器人控制器。
    - 在 `BFS_exercise_1.py` 中，确保Flask服务器地址和端口设置正确（例如，如果Flask运行在默认端口，则API请求将发送到 `http://127.0.0.1:5000`）。
    - 启动Webots仿真。控制器将开始与Flask服务器通信。
