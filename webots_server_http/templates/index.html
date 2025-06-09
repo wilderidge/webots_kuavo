@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webots Robot Control</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #status-box { border: 1px solid #ccc; padding: 10px; margin-top: 20px; background-color: #f9f9f9; }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(8, 40px); /* 8 columns, 40px each */
+            grid-template-rows: repeat(8, 40px);    /* 8 rows, 40px each */
+            border: 1px solid black;
+            width: 320px; /* 8 * 40px */
+            height: 320px; /* 8 * 40px */
+        }
+        .grid-cell {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8em;
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+        .obstacle {
+            background-color: #a0a0a0;
+        }
+        .robot {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            font-weight: bold;
+        }
+        .goal {
+            background-color: #f44336; /* Red */
+            color: white;
+            font-weight: bold;
+        }
+        .path {
+            background-color: #add8e6; /* Light blue */
+        }
+    </style>
+</head>
+<body>
+    <h1>Webots Robot Control Interface</h1>
+
+    <div>
+        <h2>Set Robot Goal (Row, Column)</h2>
+        Row: <input type="number" id="goalRow" value="7" min="0" max="7">
+        Column: <input type="number" id="goalCol" value="7" min="0" max="7">
+        <button onclick="sendGoal()">Set Goal</button>
+    </div>
+
+    <div id="status-box">
+        <h2>Robot Status</h2>
+        <p>Current Position: <span id="robotPosition">(?, ?)</span></p>
+        <p>Status Message: <span id="robotStatus">Idle</span></p>
+    </div>
+
+    <h2>World Map</h2>
+    <div class="grid-container" id="worldMapGrid"></div>
+
+    <script>
+        const map = [
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 1, 0, 0, 0],
+            [0, 1, 1, 0, 1, 1, 1, 0],
+            [0, 1, 1, 0, 0, 0, 1, 0],
+            [0, 0, 0, 0, 0, 0, 1, 0],
+            [0, 0, 0, 0, 1, 0, 0, 0],
+            [0, 0, 0, 0, 1, 0, 0, 0]
+        ];
+
+        let currentRobotPos = [7, 1]; // Initial display position
+        let currentGoalPos = null;
+
+        function sendGoal() {
+            const row = parseInt(document.getElementById('goalRow').value);
+            const col = parseInt(document.getElementById('goalCol').value);
+            currentGoalPos = [row, col]; // Update client-side goal display
+            fetch('/set_goal', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ goal: [row, col] }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Goal sent:', data);
+                updateMapDisplay(); // Update map after sending goal
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+
+        function getRobotStatus() {
+            fetch('/get_robot_status')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('robotPosition').textContent = `(${data.robot_position[0]}, ${data.robot_position[1]})`;
+                document.getElementById('robotStatus').textContent = data.status;
+                currentRobotPos = data.robot_position;
+                updateMapDisplay(); // Update map with new robot position
+            })
+            .catch((error) => {
+                console.error('Error fetching robot status:', error);
+            });
+        }
+
+        function createMapGrid() {
+            const gridContainer = document.getElementById('worldMapGrid');
+            gridContainer.innerHTML = ''; // Clear previous grid
+            for (let r = 0; r < map.length; r++) {
+                for (let c = 0; c < map[r].length; c++) {
+                    const cell = document.createElement('div');
+                    cell.classList.add('grid-cell');
+                    cell.dataset.row = r;
+                    cell.dataset.col = c;
+                    if (map[r][c] === 1) {
+                        cell.classList.add('obstacle');
+                        cell.textContent = 'X';
+                    }
+                    gridContainer.appendChild(cell);
+                }
+            }
+        }
+
+        function updateMapDisplay() {
+            // Clear previous robot/goal/path highlights
+            document.querySelectorAll('.robot, .goal, .path').forEach(cell => {
+                cell.classList.remove('robot', 'goal', 'path');
+                if (cell.dataset.initialContent) {
+                    cell.textContent = cell.dataset.initialContent;
+                } else {
+                    cell.textContent = '';
+                }
+            });
+
+            // Highlight robot position
+            const robotCell = document.querySelector(`.grid-cell[data-row='${currentRobotPos[0]}'][data-col='${currentRobotPos[1]}']`);
+            if (robotCell) {
+                robotCell.classList.add('robot');
+                robotCell.dataset.initialContent = robotCell.textContent; // Store original content
+                robotCell.textContent = 'R';
+            }
+
+            // Highlight goal position
+            if (currentGoalPos) {
+                const goalCell = document.querySelector(`.grid-cell[data-row='${currentGoalPos[0]}'][data-col='${currentGoalPos[1]}']`);
+                if (goalCell) {
+                    goalCell.classList.add('goal');
+                    goalCell.dataset.initialContent = goalCell.textContent; // Store original content
+                    goalCell.textContent = 'G';
+                }
+            }
+            // For path visualization, you'd need the path from the robot controller/server
+            // This would typically be sent along with the status updates or separately.
+            // For now, it's not implemented in the client-side map.
+        }
+
+        // Initialize map on load
+        document.addEventListener('DOMContentLoaded', () => {
+            createMapGrid();
+            getRobotStatus(); // Get initial status
+            setInterval(getRobotStatus, 500); // Poll for status every 500ms
+        });
+    </script>
+</body>
+</html>

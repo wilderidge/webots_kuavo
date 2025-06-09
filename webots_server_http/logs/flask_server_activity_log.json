@@ -1,0 +1,2630 @@
+[
+    {
+        "timestamp_unix": 1749459980.7854242,
+        "timestamp_readable": "2025-06-09 17:06:20.785",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459980.7897015,
+        "timestamp_readable": "2025-06-09 17:06:20.789",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459980.7917,
+        "timestamp_readable": "2025-06-09 17:06:20.791",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459980.7932055,
+        "timestamp_readable": "2025-06-09 17:06:20.793",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459980.7942219,
+        "timestamp_readable": "2025-06-09 17:06:20.794",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459980.7942219,
+        "timestamp_readable": "2025-06-09 17:06:20.794",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459980.796212,
+        "timestamp_readable": "2025-06-09 17:06:20.796",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459980.796212,
+        "timestamp_readable": "2025-06-09 17:06:20.796",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459980.7972107,
+        "timestamp_readable": "2025-06-09 17:06:20.797",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459980.7992127,
+        "timestamp_readable": "2025-06-09 17:06:20.799",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459980.8002126,
+        "timestamp_readable": "2025-06-09 17:06:20.800",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459980.9642544,
+        "timestamp_readable": "2025-06-09 17:06:20.964",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459981.0015547,
+        "timestamp_readable": "2025-06-09 17:06:21.001",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459981.1431978,
+        "timestamp_readable": "2025-06-09 17:06:21.143",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459981.53931,
+        "timestamp_readable": "2025-06-09 17:06:21.539",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459982.0381901,
+        "timestamp_readable": "2025-06-09 17:06:22.038",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459982.5518198,
+        "timestamp_readable": "2025-06-09 17:06:22.551",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459982.894682,
+        "timestamp_readable": "2025-06-09 17:06:22.894",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459983.3973331,
+        "timestamp_readable": "2025-06-09 17:06:23.397",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459983.7995183,
+        "timestamp_readable": "2025-06-09 17:06:23.799",
+        "event_type": "set_goal_success",
+        "request_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Goal received and set."
+    },
+    {
+        "timestamp_unix": 1749459983.900793,
+        "timestamp_readable": "2025-06-09 17:06:23.900",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459984.395213,
+        "timestamp_readable": "2025-06-09 17:06:24.395",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459984.9073606,
+        "timestamp_readable": "2025-06-09 17:06:24.907",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459985.405402,
+        "timestamp_readable": "2025-06-09 17:06:25.405",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459985.898768,
+        "timestamp_readable": "2025-06-09 17:06:25.898",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459986.4003835,
+        "timestamp_readable": "2025-06-09 17:06:26.400",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459986.9120226,
+        "timestamp_readable": "2025-06-09 17:06:26.912",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459987.4113758,
+        "timestamp_readable": "2025-06-09 17:06:27.411",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459987.8961818,
+        "timestamp_readable": "2025-06-09 17:06:27.896",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459988.4065409,
+        "timestamp_readable": "2025-06-09 17:06:28.406",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459988.5899036,
+        "timestamp_readable": "2025-06-09 17:06:28.589",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749459988.5945203,
+        "timestamp_readable": "2025-06-09 17:06:28.594",
+        "event_type": "robot_status_update_success",
+        "request_data": {
+            "robot_position": [
+                7,
+                1
+            ],
+            "status": "Path calculated to (7, 7)"
+        },
+        "message": "Robot status updated."
+    },
+    {
+        "timestamp_unix": 1749459988.898307,
+        "timestamp_readable": "2025-06-09 17:06:28.898",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459989.3997383,
+        "timestamp_readable": "2025-06-09 17:06:29.399",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459989.9014745,
+        "timestamp_readable": "2025-06-09 17:06:29.901",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459990.411121,
+        "timestamp_readable": "2025-06-09 17:06:30.411",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459990.8972986,
+        "timestamp_readable": "2025-06-09 17:06:30.897",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459991.4155293,
+        "timestamp_readable": "2025-06-09 17:06:31.415",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459991.9019287,
+        "timestamp_readable": "2025-06-09 17:06:31.901",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459992.4017923,
+        "timestamp_readable": "2025-06-09 17:06:32.401",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459992.9005303,
+        "timestamp_readable": "2025-06-09 17:06:32.900",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459993.399807,
+        "timestamp_readable": "2025-06-09 17:06:33.399",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459993.9033132,
+        "timestamp_readable": "2025-06-09 17:06:33.903",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459994.4015207,
+        "timestamp_readable": "2025-06-09 17:06:34.401",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459994.8961344,
+        "timestamp_readable": "2025-06-09 17:06:34.896",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459995.4121275,
+        "timestamp_readable": "2025-06-09 17:06:35.412",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459995.8983629,
+        "timestamp_readable": "2025-06-09 17:06:35.898",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459996.4037476,
+        "timestamp_readable": "2025-06-09 17:06:36.403",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459996.9134996,
+        "timestamp_readable": "2025-06-09 17:06:36.913",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459997.4107273,
+        "timestamp_readable": "2025-06-09 17:06:37.410",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459997.9050932,
+        "timestamp_readable": "2025-06-09 17:06:37.905",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459998.4033608,
+        "timestamp_readable": "2025-06-09 17:06:38.403",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459998.895869,
+        "timestamp_readable": "2025-06-09 17:06:38.895",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459999.4031632,
+        "timestamp_readable": "2025-06-09 17:06:39.403",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749459999.8932776,
+        "timestamp_readable": "2025-06-09 17:06:39.893",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460000.2853446,
+        "timestamp_readable": "2025-06-09 17:06:40.285",
+        "event_type": "robot_status_update_success",
+        "request_data": {
+            "robot_position": [
+                6,
+                1
+            ],
+            "status": "Moving along path."
+        },
+        "message": "Robot status updated."
+    },
+    {
+        "timestamp_unix": 1749460000.402186,
+        "timestamp_readable": "2025-06-09 17:06:40.402",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460000.411703,
+        "timestamp_readable": "2025-06-09 17:06:40.411",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460000.8965635,
+        "timestamp_readable": "2025-06-09 17:06:40.896",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460001.4014869,
+        "timestamp_readable": "2025-06-09 17:06:41.401",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460001.9674187,
+        "timestamp_readable": "2025-06-09 17:06:41.967",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460002.9673545,
+        "timestamp_readable": "2025-06-09 17:06:42.967",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460003.9599752,
+        "timestamp_readable": "2025-06-09 17:06:43.959",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460004.9653096,
+        "timestamp_readable": "2025-06-09 17:06:44.965",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460005.958453,
+        "timestamp_readable": "2025-06-09 17:06:45.958",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460006.9662683,
+        "timestamp_readable": "2025-06-09 17:06:46.966",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460007.970319,
+        "timestamp_readable": "2025-06-09 17:06:47.970",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460008.966749,
+        "timestamp_readable": "2025-06-09 17:06:48.966",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460009.1248064,
+        "timestamp_readable": "2025-06-09 17:06:49.124",
+        "event_type": "robot_status_update_success",
+        "request_data": {
+            "robot_position": [
+                5,
+                1
+            ],
+            "status": "Moving along path."
+        },
+        "message": "Robot status updated."
+    },
+    {
+        "timestamp_unix": 1749460009.2662003,
+        "timestamp_readable": "2025-06-09 17:06:49.266",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460009.9645338,
+        "timestamp_readable": "2025-06-09 17:06:49.964",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460010.9642594,
+        "timestamp_readable": "2025-06-09 17:06:50.964",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460011.9718513,
+        "timestamp_readable": "2025-06-09 17:06:51.971",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460012.9699817,
+        "timestamp_readable": "2025-06-09 17:06:52.969",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460013.9633954,
+        "timestamp_readable": "2025-06-09 17:06:53.963",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460014.973787,
+        "timestamp_readable": "2025-06-09 17:06:54.973",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460015.967141,
+        "timestamp_readable": "2025-06-09 17:06:55.967",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460016.968145,
+        "timestamp_readable": "2025-06-09 17:06:56.968",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460017.970631,
+        "timestamp_readable": "2025-06-09 17:06:57.970",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460018.970354,
+        "timestamp_readable": "2025-06-09 17:06:58.970",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460019.965562,
+        "timestamp_readable": "2025-06-09 17:06:59.965",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460020.87391,
+        "timestamp_readable": "2025-06-09 17:07:00.873",
+        "event_type": "robot_status_update_success",
+        "request_data": {
+            "robot_position": [
+                5,
+                2
+            ],
+            "status": "Moving along path."
+        },
+        "message": "Robot status updated."
+    },
+    {
+        "timestamp_unix": 1749460020.9642358,
+        "timestamp_readable": "2025-06-09 17:07:00.964",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460021.013439,
+        "timestamp_readable": "2025-06-09 17:07:01.013",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460021.9590557,
+        "timestamp_readable": "2025-06-09 17:07:01.959",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460022.9719765,
+        "timestamp_readable": "2025-06-09 17:07:02.971",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460023.967266,
+        "timestamp_readable": "2025-06-09 17:07:03.967",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460024.9633646,
+        "timestamp_readable": "2025-06-09 17:07:04.963",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460025.968179,
+        "timestamp_readable": "2025-06-09 17:07:05.968",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460026.969411,
+        "timestamp_readable": "2025-06-09 17:07:06.969",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460027.968649,
+        "timestamp_readable": "2025-06-09 17:07:07.968",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460028.9674275,
+        "timestamp_readable": "2025-06-09 17:07:08.967",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460029.8083684,
+        "timestamp_readable": "2025-06-09 17:07:09.808",
+        "event_type": "robot_status_update_success",
+        "request_data": {
+            "robot_position": [
+                5,
+                3
+            ],
+            "status": "Moving along path."
+        },
+        "message": "Robot status updated."
+    },
+    {
+        "timestamp_unix": 1749460029.9240518,
+        "timestamp_readable": "2025-06-09 17:07:09.924",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460029.9648182,
+        "timestamp_readable": "2025-06-09 17:07:09.964",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460030.9754598,
+        "timestamp_readable": "2025-06-09 17:07:10.975",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460031.962511,
+        "timestamp_readable": "2025-06-09 17:07:11.962",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460032.9684474,
+        "timestamp_readable": "2025-06-09 17:07:12.968",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460033.966565,
+        "timestamp_readable": "2025-06-09 17:07:13.966",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460034.9691794,
+        "timestamp_readable": "2025-06-09 17:07:14.969",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460035.969117,
+        "timestamp_readable": "2025-06-09 17:07:15.969",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460036.9586346,
+        "timestamp_readable": "2025-06-09 17:07:16.958",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460037.9713032,
+        "timestamp_readable": "2025-06-09 17:07:17.971",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460038.7007594,
+        "timestamp_readable": "2025-06-09 17:07:18.700",
+        "event_type": "robot_status_update_success",
+        "request_data": {
+            "robot_position": [
+                5,
+                4
+            ],
+            "status": "Moving along path."
+        },
+        "message": "Robot status updated."
+    },
+    {
+        "timestamp_unix": 1749460038.835542,
+        "timestamp_readable": "2025-06-09 17:07:18.835",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460038.9700534,
+        "timestamp_readable": "2025-06-09 17:07:18.970",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460039.9575984,
+        "timestamp_readable": "2025-06-09 17:07:19.957",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460040.968756,
+        "timestamp_readable": "2025-06-09 17:07:20.968",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460041.9765832,
+        "timestamp_readable": "2025-06-09 17:07:21.976",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460042.962507,
+        "timestamp_readable": "2025-06-09 17:07:22.962",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460043.9714882,
+        "timestamp_readable": "2025-06-09 17:07:23.971",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460044.9575932,
+        "timestamp_readable": "2025-06-09 17:07:24.957",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460045.9675353,
+        "timestamp_readable": "2025-06-09 17:07:25.967",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460046.9672954,
+        "timestamp_readable": "2025-06-09 17:07:26.967",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460047.7847004,
+        "timestamp_readable": "2025-06-09 17:07:27.784",
+        "event_type": "robot_status_update_success",
+        "request_data": {
+            "robot_position": [
+                5,
+                5
+            ],
+            "status": "Moving along path."
+        },
+        "message": "Robot status updated."
+    },
+    {
+        "timestamp_unix": 1749460047.904969,
+        "timestamp_readable": "2025-06-09 17:07:27.904",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460047.964654,
+        "timestamp_readable": "2025-06-09 17:07:27.964",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460048.9574492,
+        "timestamp_readable": "2025-06-09 17:07:28.957",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460049.9701118,
+        "timestamp_readable": "2025-06-09 17:07:29.970",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460050.9642258,
+        "timestamp_readable": "2025-06-09 17:07:30.964",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460051.9693782,
+        "timestamp_readable": "2025-06-09 17:07:31.969",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460052.9724321,
+        "timestamp_readable": "2025-06-09 17:07:32.972",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460053.9702168,
+        "timestamp_readable": "2025-06-09 17:07:33.970",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460054.9620905,
+        "timestamp_readable": "2025-06-09 17:07:34.962",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460055.969589,
+        "timestamp_readable": "2025-06-09 17:07:35.969",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460056.9668782,
+        "timestamp_readable": "2025-06-09 17:07:36.966",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460057.9643328,
+        "timestamp_readable": "2025-06-09 17:07:37.964",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460058.956976,
+        "timestamp_readable": "2025-06-09 17:07:38.956",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460059.7424023,
+        "timestamp_readable": "2025-06-09 17:07:39.742",
+        "event_type": "robot_status_update_success",
+        "request_data": {
+            "robot_position": [
+                6,
+                5
+            ],
+            "status": "Moving along path."
+        },
+        "message": "Robot status updated."
+    },
+    {
+        "timestamp_unix": 1749460059.86087,
+        "timestamp_readable": "2025-06-09 17:07:39.860",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460059.9661667,
+        "timestamp_readable": "2025-06-09 17:07:39.966",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460060.969118,
+        "timestamp_readable": "2025-06-09 17:07:40.969",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460071.3654532,
+        "timestamp_readable": "2025-06-09 17:07:51.365",
+        "event_type": "robot_status_update_success",
+        "request_data": {
+            "robot_position": [
+                6,
+                6
+            ],
+            "status": "Moving along path."
+        },
+        "message": "Robot status updated."
+    },
+    {
+        "timestamp_unix": 1749460071.4876854,
+        "timestamp_readable": "2025-06-09 17:07:51.487",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460080.2552717,
+        "timestamp_readable": "2025-06-09 17:08:00.255",
+        "event_type": "robot_status_update_success",
+        "request_data": {
+            "robot_position": [
+                6,
+                7
+            ],
+            "status": "Moving along path."
+        },
+        "message": "Robot status updated."
+    },
+    {
+        "timestamp_unix": 1749460080.3784437,
+        "timestamp_readable": "2025-06-09 17:08:00.378",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460091.8341188,
+        "timestamp_readable": "2025-06-09 17:08:11.834",
+        "event_type": "robot_status_update_success",
+        "request_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Moving along path."
+        },
+        "message": "Robot status updated."
+    },
+    {
+        "timestamp_unix": 1749460091.9540164,
+        "timestamp_readable": "2025-06-09 17:08:11.954",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460091.9581015,
+        "timestamp_readable": "2025-06-09 17:08:11.958",
+        "event_type": "robot_status_update_success",
+        "request_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Robot status updated."
+    },
+    {
+        "timestamp_unix": 1749460092.0786192,
+        "timestamp_readable": "2025-06-09 17:08:12.078",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460092.202325,
+        "timestamp_readable": "2025-06-09 17:08:12.202",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460092.3266685,
+        "timestamp_readable": "2025-06-09 17:08:12.326",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460092.4495938,
+        "timestamp_readable": "2025-06-09 17:08:12.449",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460092.5734682,
+        "timestamp_readable": "2025-06-09 17:08:12.573",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460092.700391,
+        "timestamp_readable": "2025-06-09 17:08:12.700",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460092.8233075,
+        "timestamp_readable": "2025-06-09 17:08:12.823",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460092.9499438,
+        "timestamp_readable": "2025-06-09 17:08:12.949",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460093.0711389,
+        "timestamp_readable": "2025-06-09 17:08:13.071",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460093.1875536,
+        "timestamp_readable": "2025-06-09 17:08:13.187",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460093.3001707,
+        "timestamp_readable": "2025-06-09 17:08:13.300",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460093.4207919,
+        "timestamp_readable": "2025-06-09 17:08:13.420",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460093.536582,
+        "timestamp_readable": "2025-06-09 17:08:13.536",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460093.6581306,
+        "timestamp_readable": "2025-06-09 17:08:13.658",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460093.7753596,
+        "timestamp_readable": "2025-06-09 17:08:13.775",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460093.8912807,
+        "timestamp_readable": "2025-06-09 17:08:13.891",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460094.011836,
+        "timestamp_readable": "2025-06-09 17:08:14.011",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460094.1325424,
+        "timestamp_readable": "2025-06-09 17:08:14.132",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460094.2434223,
+        "timestamp_readable": "2025-06-09 17:08:14.243",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460094.3541586,
+        "timestamp_readable": "2025-06-09 17:08:14.354",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460094.4669988,
+        "timestamp_readable": "2025-06-09 17:08:14.466",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460094.5802867,
+        "timestamp_readable": "2025-06-09 17:08:14.580",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460094.6974294,
+        "timestamp_readable": "2025-06-09 17:08:14.697",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460094.8116915,
+        "timestamp_readable": "2025-06-09 17:08:14.811",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460094.9223459,
+        "timestamp_readable": "2025-06-09 17:08:14.922",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460095.0340056,
+        "timestamp_readable": "2025-06-09 17:08:15.034",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460095.1449003,
+        "timestamp_readable": "2025-06-09 17:08:15.144",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460095.259917,
+        "timestamp_readable": "2025-06-09 17:08:15.259",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460095.3775396,
+        "timestamp_readable": "2025-06-09 17:08:15.377",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460095.4891162,
+        "timestamp_readable": "2025-06-09 17:08:15.489",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460095.5996032,
+        "timestamp_readable": "2025-06-09 17:08:15.599",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460095.7121673,
+        "timestamp_readable": "2025-06-09 17:08:15.712",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460095.8246043,
+        "timestamp_readable": "2025-06-09 17:08:15.824",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460095.937265,
+        "timestamp_readable": "2025-06-09 17:08:15.937",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460096.0392222,
+        "timestamp_readable": "2025-06-09 17:08:16.039",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460096.0485137,
+        "timestamp_readable": "2025-06-09 17:08:16.048",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460096.1597104,
+        "timestamp_readable": "2025-06-09 17:08:16.159",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460096.2708163,
+        "timestamp_readable": "2025-06-09 17:08:16.270",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460096.3821242,
+        "timestamp_readable": "2025-06-09 17:08:16.382",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460096.396346,
+        "timestamp_readable": "2025-06-09 17:08:16.396",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460096.4913394,
+        "timestamp_readable": "2025-06-09 17:08:16.491",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460096.6034052,
+        "timestamp_readable": "2025-06-09 17:08:16.603",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460096.7132404,
+        "timestamp_readable": "2025-06-09 17:08:16.713",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460096.8238106,
+        "timestamp_readable": "2025-06-09 17:08:16.823",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460096.9351127,
+        "timestamp_readable": "2025-06-09 17:08:16.935",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460096.9624527,
+        "timestamp_readable": "2025-06-09 17:08:16.962",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460097.0455337,
+        "timestamp_readable": "2025-06-09 17:08:17.045",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460097.1554854,
+        "timestamp_readable": "2025-06-09 17:08:17.155",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460097.267459,
+        "timestamp_readable": "2025-06-09 17:08:17.267",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460097.3780966,
+        "timestamp_readable": "2025-06-09 17:08:17.378",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460097.4894283,
+        "timestamp_readable": "2025-06-09 17:08:17.489",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460097.599759,
+        "timestamp_readable": "2025-06-09 17:08:17.599",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460097.7106,
+        "timestamp_readable": "2025-06-09 17:08:17.710",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460097.8205934,
+        "timestamp_readable": "2025-06-09 17:08:17.820",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460097.9315996,
+        "timestamp_readable": "2025-06-09 17:08:17.931",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460097.9585931,
+        "timestamp_readable": "2025-06-09 17:08:17.958",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460098.0459602,
+        "timestamp_readable": "2025-06-09 17:08:18.045",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460098.1561682,
+        "timestamp_readable": "2025-06-09 17:08:18.156",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460098.2666163,
+        "timestamp_readable": "2025-06-09 17:08:18.266",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460098.376981,
+        "timestamp_readable": "2025-06-09 17:08:18.376",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460098.4874406,
+        "timestamp_readable": "2025-06-09 17:08:18.487",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460098.5984907,
+        "timestamp_readable": "2025-06-09 17:08:18.598",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460098.7085328,
+        "timestamp_readable": "2025-06-09 17:08:18.708",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460098.8203917,
+        "timestamp_readable": "2025-06-09 17:08:18.820",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460098.9315305,
+        "timestamp_readable": "2025-06-09 17:08:18.931",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460098.9714093,
+        "timestamp_readable": "2025-06-09 17:08:18.971",
+        "event_type": "get_robot_status",
+        "response_data": {
+            "robot_position": [
+                7,
+                7
+            ],
+            "status": "Goal reached!"
+        },
+        "message": "Web client fetched robot status."
+    },
+    {
+        "timestamp_unix": 1749460099.0421636,
+        "timestamp_readable": "2025-06-09 17:08:19.042",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460099.1558714,
+        "timestamp_readable": "2025-06-09 17:08:19.155",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    },
+    {
+        "timestamp_unix": 1749460099.2659278,
+        "timestamp_readable": "2025-06-09 17:08:19.265",
+        "event_type": "get_robot_command",
+        "response_data": {
+            "goal": [
+                7,
+                7
+            ]
+        },
+        "message": "Webots controller fetched command."
+    }
+]

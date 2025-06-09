@@ -1,0 +1,69 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "../protos/Pr2.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/WoodenBox.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5286831169095936 0.5369134074592687 0.6574330040279652 1.9642033337407678
+  position -1.4091936704071828 -4.015602730572763 17.527801979917026
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 8 8
+  floorTileSize 2 2
+}
+DEF PR2_ROBOT Pr2 {
+  hidden linearVelocity_0 1.5549401833023799e-06 2.405367694998824e-05 -9.19464142963277e-08
+  hidden angularVelocity_0 -0.00042699972907856386 2.818543995528568e-05 0.00031189274118649974
+  hidden rotation_6 0 0 1 1.5419642114969313e-06
+  hidden rotation_15 0 0 1 3.9085379387748307e-07
+  translation -2.5000087045607833 -3.5000194864509884 -0.027993602183515248
+  rotation 0.008961498554393378 0.999912439749681 -0.009736753950891696 0.0035793637077443444
+  controller "BFS_exercise_1"
+  extensionSlot1 [
+    InertialUnit {
+    }
+  ]
+  extensionSlot2 [
+    GPS {
+    }
+  ]
+}
+DEF OBSTACLE_BOX_1 WoodenBox {
+  translation -2 0 0.5
+  size 2 2 1
+}
+DEF OBSTACLE_BOX_2 WoodenBox {
+  translation 0.5 -3 0.5
+  name "wooden box(1)"
+  size 1 2 1
+}
+DEF OBSTACLE_BOX_3 WoodenBox {
+  translation 2.5 -1 0.5
+  name "wooden box(2)"
+  size 1 2 1
+}
+DEF OBSTACLE_BOX_5 WoodenBox {
+  translation 0.5 1 0.5
+  name "wooden box(4)"
+  size 1 2 1
+}
+DEF OBSTACLE_BOX_4 WoodenBox {
+  translation 2 0.5 0.5
+  name "wooden box(3)"
+  size 2 1 1
+}
+DEF SUPERVISOR_MONITOR Robot {
+  translation 0 10 0
+  name "supervisor_monitor_robot"
+  controller "supervisor_monitor"
+  supervisor TRUE
+}
