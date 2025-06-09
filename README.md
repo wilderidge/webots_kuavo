@@ -517,7 +517,7 @@ Webots_PR2_Path_Planning/
 4. **运行Flask服务器:** 在终端运行flask服务器：
 
    ```bash
-python flask_server.py
+   python flask_server.py
    ```
    
    服务器默认将在端口**http://127.0.0.1:5000**运行。
