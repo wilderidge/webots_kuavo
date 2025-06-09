@@ -520,7 +520,7 @@ Webots_PR2_Path_Planning/
    python flask_server.py
    ```
    
-   服务器默认将在端口**http://127.0.0.1:5000**运行。
+   服务器默认将在端口 **http://127.0.0.1:5000** 运行。
 
 5. **配置和运行Webots仿真:**
 
