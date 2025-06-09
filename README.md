@@ -31,7 +31,7 @@ Flask 服务器现在作为 HTTP RESTful API 服务器，支持PR2机器人导�
 
 - **响应 (JSON - 200 OK):**
 
-  ```json
+  ```
   [
       {
           "status": "success",
@@ -46,7 +46,7 @@ Flask 服务器现在作为 HTTP RESTful API 服务器，支持PR2机器人导�
 
 - **错误响应 (JSON - 400 Bad Request):**
 
-  ```json
+  ```
   [
       {
           "status": "error",
@@ -62,7 +62,7 @@ Flask 服务器现在作为 HTTP RESTful API 服务器，支持PR2机器人导�
 
 - **请求体 (JSON - 列表):**
 
-  ```json
+  ```
   [
       {
           "type": "joint_control",
@@ -108,7 +108,7 @@ Flask 服务器现在作为 HTTP RESTful API 服务器，支持PR2机器人导�
 
 - **响应 (JSON - 200 OK):**
 
-  ```json
+  ```
   [
       {
           "status": "success",
@@ -130,7 +130,7 @@ Flask 服务器现在作为 HTTP RESTful API 服务器，支持PR2机器人导�
 
 - **错误响应 (JSON - 400 Bad Request):**
 
-  ```json
+  ```
   [
       {
           "status": "error",
@@ -161,7 +161,7 @@ Flask 服务器现在作为 HTTP RESTful API 服务器，支持PR2机器人导�
 
   - **导航指令示例：**
 
-    ```json
+    ```
     [
         {
             "type": "navigation",
@@ -172,7 +172,7 @@ Flask 服务器现在作为 HTTP RESTful API 服务器，支持PR2机器人导�
 
   - **关节角度控制指令示例：**
 
-    ```json
+    ```
     [
         {
             "type": "joint_control",
@@ -187,7 +187,7 @@ Flask 服务器现在作为 HTTP RESTful API 服务器，支持PR2机器人导�
 
   - **末端姿态控制指令示例：**
 
-    ```json
+    ```
     [
         {
             "type": "pose_control",
@@ -205,7 +205,7 @@ Flask 服务器现在作为 HTTP RESTful API 服务器，支持PR2机器人导�
 
   - **无指令时：**
 
-    ```json
+    ```
     []
     ```
 
@@ -219,7 +219,7 @@ Flask 服务器现在作为 HTTP RESTful API 服务器，支持PR2机器人导�
 
 - **请求体 (JSON - 列表):**
 
-  ```json
+  ```
   [
       {
           "timestamp": float,                          // 时间戳
@@ -259,7 +259,7 @@ Flask 服务器现在作为 HTTP RESTful API 服务器，支持PR2机器人导�
 
 - **响应 (JSON - 200 OK):**
 
-  ```json
+  ```
   [
       {
           "status": "success",
@@ -270,7 +270,7 @@ Flask 服务器现在作为 HTTP RESTful API 服务器，支持PR2机器人导�
 
 - **错误响应 (JSON - 400 Bad Request):**
 
-  ```json
+  ```
   [
       {
           "status": "error",
@@ -296,7 +296,7 @@ Flask 服务器现在作为 HTTP RESTful API 服务器，支持PR2机器人导�
 
   - 返回一个包含单个状态对象的列表。格式与 `POST /robot_status` 的请求体相同。
 
-  ```json
+  ```
   [
       {
           "timestamp": float,
@@ -318,7 +318,7 @@ Flask 服务器现在作为 HTTP RESTful API 服务器，支持PR2机器人导�
 
 - **错误响应 (JSON - 500 Internal Server Error):**
 
-  ```json
+  ```
   [
       {
           "status": "error",
@@ -338,7 +338,7 @@ Flask 服务器现在作为 HTTP RESTful API 服务器，支持PR2机器人导�
 
 - **请求体 (JSON):**
 
-  ```json
+  ```
   {
       "timestamp": float, // Unix 时间戳，表示数据发送时间
       "nodes": [          // 监控到的节点列表
@@ -359,7 +359,7 @@ Flask 服务器现在作为 HTTP RESTful API 服务器，支持PR2机器人导�
 
 - **请求示例：**
 
-  ```JSON
+  ```
   {
       "timestamp": 1749458633.1826954,
       "nodes": [
@@ -399,7 +399,7 @@ Flask 服务器现在作为 HTTP RESTful API 服务器，支持PR2机器人导�
 
 - **响应 (JSON - 200 OK):**
 
-  ```JSON
+  ```
   {
       "message": "World status updated"
   }
