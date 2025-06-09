@@ -14,7 +14,7 @@ Flask 服务器现在作为 HTTP RESTful API 服务器，支持PR2机器人导�
 
 - **请求体 (JSON - 列表):**
 
-  ```json
+  ```
   [
       {
           "type": "navigation",
