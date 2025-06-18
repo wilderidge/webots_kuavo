@@ -9,8 +9,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.5286831169095936 0.5369134074592687 0.6574330040279652 1.9642033337407678
-  position -1.4091936704071828 -4.015602730572763 17.527801979917026
+  orientation 0.5822612112348909 -0.5881728864363943 -0.5612704673794606 4.155327132529761
+  position 0.29281275432535836 0.6631143647963142 16.134634289208737
 }
 TexturedBackground {
 }
@@ -61,9 +61,32 @@ DEF OBSTACLE_BOX_4 WoodenBox {
   name "wooden box(3)"
   size 2 1 1
 }
-DEF SUPERVISOR_MONITOR Robot {
-  translation 0 10 0
-  name "supervisor_monitor_robot"
+DEF SUPERVISOR Robot {
+  children [
+    Camera {
+      name "camera_rgb"
+      translation 0.29281275432535836 0.6631143647963142 16.134634289208737
+      rotation 0.5822612112348909 -0.5881728864363943 -0.5612704673794606 4.155327132529761
+      fieldOfView 0.785398
+      width 640
+      height 480
+      recognition Recognition {
+        maxRange 100
+      }
+    }
+    RangeFinder {
+      name "camera_dpt"
+      translation 0.29281275432535836 0.6631143647963142 16.134634289208737
+      rotation 0.5822612112348909 -0.5881728864363943 -0.5612704673794606 4.155327132529761
+      fieldOfView 0.785398
+      width 640
+      height 480
+      minRange 12
+      maxRange 40
+      resolution 1
+    }
+  ]
+  name "supervisor_robot"
   controller "supervisor_monitor"
   supervisor TRUE
 }

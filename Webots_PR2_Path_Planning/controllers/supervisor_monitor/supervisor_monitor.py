@@ -5,12 +5,43 @@ import time
 import requests
 import json
 import math
+import base64
+import io
+from PIL import Image
+import numpy as np
 
 # Configuration for Web communication
 WEB_SERVER_URL = "http://127.0.0.1:5000/world_status"
+CAMERA_STATUS_URL = "http://127.0.0.1:5000/camera_status"
 
 supervisor = Supervisor()
 timestep = int(supervisor.getBasicTimeStep())
+
+# 获取相机设备
+camera_rgb = None
+camera_dpt = None
+
+def init_devices():
+    global camera_rgb, camera_dpt
+    
+    # 获取RGB相机
+    camera_rgb = supervisor.getDevice('camera_rgb')
+    if camera_rgb:
+        camera_rgb.enable(50)
+        print("RGB相机初始化成功")
+    else:
+        print("警告: 找不到RGB相机")
+        
+    # 获取深度相机
+    camera_dpt = supervisor.getDevice('camera_dpt')
+    if camera_dpt:
+        camera_dpt.enable(50)
+        print("深度相机初始化成功")
+    else:
+        print("警告: 找不到深度相机")
+
+# 调用初始化函数
+init_devices()
 
 # 定义你需要监控的节点名称列表
 # 这些名称必须与你在 .wbt 文件中为机器人和障碍物定义的 DEF 名称完全一致
@@ -133,6 +164,49 @@ def has_moved(current_props, last_props):
 last_send_time = 0
 send_interval = 1.0 # 每秒发送一次状态更新
 
+# 优化深度图发送逻辑
+def send_camera_data():
+    if camera_dpt and camera_dpt.getRangeImage():
+        depth_data = camera_dpt.getRangeImage()
+        # 将深度数据归一化到0-255范围
+        depth_normalized = (np.array(depth_data) * 255 / 10.0).astype(np.uint8) # 假设最大深度10m
+        depth_image = Image.fromarray(depth_normalized)
+        # 处理RGB图像
+        image_data = camera_rgb.getImage()
+        # 将Webots相机图像转换为PIL图像
+        pil_image = Image.frombytes('RGBA', (camera_rgb.getWidth(), camera_rgb.getHeight()), image_data)
+        # 将图像转换为base64字符串
+        img_byte_arr = io.BytesIO()
+        pil_image.save(img_byte_arr, format='PNG')
+        img_byte_arr = img_byte_arr.getvalue()
+        encoded_image = base64.b64encode(img_byte_arr).decode('utf-8')
+        
+        try:
+            requests.post(CAMERA_STATUS_URL, json={'image': encoded_image})
+        except requests.exceptions.RequestException as e:
+            print(f"Error sending camera data: {e}")
+
+    if camera_dpt and camera_dpt.getRangeImage():
+        # 处理深度数据中的NaN和无穷大值
+        depth_array = np.nan_to_num(np.array(depth_data), nan=0.0, posinf=0.0, neginf=0.0)
+        # 限制数值范围并转换类型
+        depth_normalized = (depth_array * 255 / 10.0).clip(0, 255).astype(np.uint8)
+        # 将深度图像数据转换为可发送格式（例如，base64 编码）
+        # 这里假设深度数据是一个一维数组，长度为宽度 * 高度
+        # 你可能需要根据实际情况调整数据处理和发送方式
+        depth_image = Image.new('L', (camera_dpt.getWidth(), camera_dpt.getHeight()))
+        depth_image.putdata(depth_data)
+        
+        img_byte_arr = io.BytesIO()
+        depth_image.save(img_byte_arr, format='PNG')
+        img_byte_arr = img_byte_arr.getvalue()
+        encoded_depth_image = base64.b64encode(img_byte_arr).decode('utf-8')
+        
+        try:
+            requests.post(CAMERA_STATUS_URL, json={'depth_image': encoded_depth_image})
+        except requests.exceptions.RequestException as e:
+            print(f"Error sending depth camera data: {e}")
+
 while supervisor.step(timestep) != -1:
     current_time = supervisor.getTime()
 
@@ -164,3 +238,5 @@ while supervisor.step(timestep) != -1:
                 print(f"Supervisor INFO: 节点 '{node_s['name']}' ({move_status}): 位置={node_s['position']}, 偏航角={node_s['rotation_degrees']['yaw']:.2f}°")
         
         last_send_time = current_time
+
+    send_camera_data()  # 发送相机数据

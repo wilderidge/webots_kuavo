@@ -1,0 +1,1944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="urdf_arm">
+  <link
+    name="urdf_arm">
+    <inertial>
+      <origin
+        xyz="-0.0174875527558622 0.00179910750290237 0.210012561233673"
+        rpy="0 0 0" />
+      <mass
+        value="5.14039351525955" />
+      <inertia
+        ixx="0.0499222359614081"
+        ixy="-1.45737146282782E-06"
+        ixz="0.000941479736923806"
+        iyy="0.0373806752216079"
+        iyz="-1.04144812553937E-05"
+        izz="0.0330605392668542" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/urdf_arm.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.168627450980392 0.168627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/urdf_arm.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="l_arm_pitch">
+    <inertial>
+      <origin
+        xyz="-0.000828036869570527 -0.0221807377225874 0.00145914525498181"
+        rpy="0 0 0" />
+      <mass
+        value="0.18413596718146" />
+      <inertia
+        ixx="0.00030820846006233"
+        ixy="-3.38787209124798E-05"
+        ixz="-4.35868313915032E-07"
+        iyy="0.000119962851844466"
+        iyz="-2.15026055530379E-06"
+        izz="0.000244415780049331" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_arm_pitch.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_arm_pitch.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_arm_pitch"
+    type="revolute">
+    <origin
+      xyz="-0.0174999999999994 0.2927 0.31039624162447"
+      rpy="0 0 0" />
+    <parent
+      link="urdf_arm" />
+    <child
+      link="l_arm_pitch" />
+    <axis
+      xyz="0 1 0" />
+    <limit lower="-3.14" upper="1.57" effort="0.5" velocity="9" />
+  </joint>
+  <link
+    name="l_arm_roll">
+    <inertial>
+      <origin
+        xyz="-0.00791081502583302 -4.96921134152117E-06 -0.0454483133121535"
+        rpy="0 0 0" />
+      <mass
+        value="0.207464613400312" />
+      <inertia
+        ixx="0.000457439178313935"
+        ixy="-4.58278097382517E-09"
+        ixz="1.03161950452115E-05"
+        iyy="0.000364197308404399"
+        iyz="2.2443394457752E-08"
+        izz="0.00017446951099124" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_arm_roll.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_arm_roll.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_arm_roll"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="l_arm_pitch" />
+    <child
+      link="l_arm_roll" />
+    <axis
+      xyz="1 0 0" />
+    <limit lower="-0.3489" upper="2.0933" effort="1.5" velocity="9" />
+  </joint>
+  <link
+    name="l_arm_yaw">
+    <inertial>
+      <origin
+        xyz="0.00628273945084577 0.0010686695168643 -0.207672767706963"
+        rpy="0 0 0" />
+      <mass
+        value="0.481289525596781" />
+      <inertia
+        ixx="0.00105282291023882"
+        ixy="-1.06576401996613E-06"
+        ixz="9.28124103755373E-05"
+        iyy="0.001047234049051"
+        iyz="-4.63917811736568E-06"
+        izz="0.000346148131521566" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_arm_yaw.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_arm_yaw.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_arm_yaw"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="l_arm_roll" />
+    <child
+      link="l_arm_yaw" />
+    <axis
+      xyz="0 0 1" />
+    <limit lower="-1.57" upper="1.57" effort="2.5" velocity="9" />
+  </joint>
+  <link
+    name="l_foream">
+    <inertial>
+      <origin
+        xyz="-0.0161081770518705 0.0014341951956906 -0.048559738798195"
+        rpy="0 0 0" />
+      <mass
+        value="0.2234980315587" />
+      <inertia
+        ixx="0.000378810354788798"
+        ixy="-2.16486964427839E-07"
+        ixz="-4.15629996863637E-05"
+        iyy="0.000498964424337024"
+        iyz="1.25133995027467E-07"
+        izz="0.000202125207411073" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_foream.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_foream.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_foream"
+    type="revolute">
+    <origin
+      xyz="0.0199999999999956 0 -0.282596241624469"
+      rpy="0 0 0" />
+    <parent
+      link="l_arm_yaw" />
+    <child
+      link="l_foream" />
+    <axis
+      xyz="0 1 0" />
+    <limit lower="-2.62" upper="0.01" effort="0" velocity="0" />
+  </joint>
+  <link
+    name="l_hand_yaw">
+    <inertial>
+      <origin
+        xyz="-0.00207265357096991 0.000180849460126531 -0.0507949618718358"
+        rpy="0 0 0" />
+      <mass
+        value="0.17513838759913" />
+      <inertia
+        ixx="0.000227384843308136"
+        ixy="2.26341283603265E-07"
+        ixz="-2.2459745379831E-06"
+        iyy="0.000195922865316427"
+        iyz="1.59530474488699E-09"
+        izz="9.47040764933854E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_hand_yaw.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_hand_yaw.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_hand_yaw"
+    type="revolute">
+    <origin
+      xyz="-0.019999999999996 0 -0.127037274261587"
+      rpy="0 0 0" />
+    <parent
+      link="l_foream" />
+    <child
+      link="l_hand_yaw" />
+    <axis
+      xyz="0 0 1" />
+    <limit lower="-1.57" upper="1.57" effort="4.5" velocity="9" />
+  </joint>
+  <link
+    name="l_hand_roll">
+    <inertial>
+      <origin
+        xyz="-0.00111109841505431 0.00325853543002191 -0.0133761737277522"
+        rpy="0 0 0" />
+      <mass
+        value="0.0840144468109417" />
+      <inertia
+        ixx="2.64319545735977E-05"
+        ixy="1.66499416484449E-07"
+        ixz="2.31962316274296E-07"
+        iyy="4.53647430396972E-05"
+        iyz="-1.02153813459502E-06"
+        izz="3.38453744858053E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_hand_roll.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_hand_roll.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_hand_roll"
+    type="revolute">
+    <origin
+      xyz="0.000199999999998968 0 -0.106462725738415"
+      rpy="0 0 0" />
+    <parent
+      link="l_hand_yaw" />
+    <child
+      link="l_hand_roll" />
+    <axis
+      xyz="1 0 0" />
+    <limit lower="-1.31" upper="0.697" effort="6.5" velocity="9" />
+  </joint>
+  <link
+    name="l_hand_pitch">
+    <inertial>
+      <origin
+        xyz="-2.91341173062759E-05 0.000381425230524535 -0.0798741942840195"
+        rpy="0 0 0" />
+      <mass
+        value="0.128051594937832" />
+      <inertia
+        ixx="4.95125209088465E-05"
+        ixy="2.08655267137498E-09"
+        ixz="-1.29921051281919E-09"
+        iyy="7.22421194195814E-05"
+        iyz="-3.91599991645418E-06"
+        izz="5.8386775532484E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_hand_pitch.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_hand_pitch.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_hand_pitch"
+    type="revolute">
+    <origin
+      xyz=" 0 0 -0.0209999999999993"
+      rpy="0 0 0" />
+    <parent
+      link="l_hand_roll" />
+    <child
+      link="l_hand_pitch" />
+    <axis
+      xyz="0 1 0" />
+    <limit lower="-0.7" upper="0.7" effort="5.5" velocity="9" />
+  </joint>
+  <link
+    name="l_f_bar-1">
+    <inertial>
+      <origin
+        xyz="0.00725281758893256 7.30388859893072E-06 -0.010523758219822"
+        rpy="0 0 0" />
+      <mass
+        value="0.00947618050885391" />
+      <inertia
+        ixx="1.97634385843721E-06"
+        ixy="-1.3072596586163E-10"
+        ixz="7.8157059268262E-07"
+        iyy="2.54904752635405E-06"
+        iyz="1.77202474550192E-11"
+        izz="1.16562093364549E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_f_bar-1.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_f_bar-1.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_f_bar-1"
+    type="continuous">
+    <origin
+      xyz="0.0221999996097327 0.58489999999999 -0.1114"
+      rpy="0 0 0" />
+    <parent
+      link="l_hand_pitch" />
+    <child
+      link="l_f_bar-1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l_f_bar-2">
+    <inertial>
+      <origin
+        xyz="-0.00783155600629153 -3.80164700775065E-07 -0.0147534045072511"
+        rpy="0 0 0" />
+      <mass
+        value="0.00339831329284512" />
+      <inertia
+        ixx="4.22804474665052E-07"
+        ixy="1.27436096288971E-11"
+        ixz="-1.77709009390353E-07"
+        iyy="4.35205518595516E-07"
+        iyz="-1.01728637949474E-11"
+        izz="2.58474450728907E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_f_bar-2.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_f_bar-2.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_f_bar-2"
+    type="continuous">
+    <origin
+      xyz="0.0254380979411405 0 -0.0464962705293315"
+      rpy="0 0 0" />
+    <parent
+      link="l_f_bar-1" />
+    <child
+      link="l_f_bar-2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l_f_fingers">
+    <inertial>
+      <origin
+        xyz="-0.0155125920713256 -9.1484151782395E-06 -0.0133066901741019"
+        rpy="0 0 0" />
+      <mass
+        value="0.00951656272415332" />
+      <inertia
+        ixx="1.19518361504236E-06"
+        ixy="4.33295481718608E-11"
+        ixz="-2.84796974864247E-07"
+        iyy="1.16036448100454E-06"
+        iyz="-3.11882018444264E-10"
+        izz="5.65771187200473E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_f_fingers.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_f_fingers.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_f_fingers"
+    type="continuous">
+    <origin
+      xyz="-0.019154851827186 0 -0.0292932014550809"
+      rpy="0 0 0" />
+    <parent
+      link="l_f_bar-2" />
+    <child
+      link="l_f_fingers" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="l_f_bar-3">
+    <inertial>
+      <origin
+        xyz="-0.00168673806356738 -5.51128129859246E-05 -0.0272295877741271"
+        rpy="0 0 0" />
+      <mass
+        value="0.00913147869821001" />
+      <inertia
+        ixx="2.10763814349319E-06"
+        ixy="2.09621859330758E-14"
+        ixz="-1.59558511684067E-07"
+        iyy="1.59797381104174E-06"
+        iyz="1.96518105838252E-12"
+        izz="6.74515531056861E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_f_bar-3.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_f_bar-3.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_f_bar-3"
+    type="continuous">
+    <origin
+      xyz="0.0241578924930401 0.58489999999999 -0.135271672920607"
+      rpy="0 0 0" />
+    <parent
+      link="l_hand_pitch" />
+    <child
+      link="l_f_bar-3" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l_b_bar-1">
+    <inertial>
+      <origin
+        xyz="-0.00725281758895095 -7.30388859698783E-06 -0.010523758219822"
+        rpy="0 0 0" />
+      <mass
+        value="0.00947618050885384" />
+      <inertia
+        ixx="1.97634385843717E-06"
+        ixy="-1.30725965882506E-10"
+        ixz="-7.8157059268265E-07"
+        iyy="2.54904752635396E-06"
+        iyz="-1.77202474771179E-11"
+        izz="1.16562093364544E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_b_bar-1.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_b_bar-1.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_b_bar-1"
+    type="continuous">
+    <origin
+      xyz="-0.0218000003905871 0.58489999999999 -0.1114"
+      rpy="0 0 0" />
+    <parent
+      link="l_hand_pitch" />
+    <child
+      link="l_b_bar-1" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="l_b_bar_2">
+    <inertial>
+      <origin
+        xyz="0.00783155600626179 3.80164702162844E-07 -0.0147534045072508"
+        rpy="0 0 0" />
+      <mass
+        value="0.0033983132928451" />
+      <inertia
+        ixx="4.22804474665111E-07"
+        ixy="1.27436096356508E-11"
+        ixz="1.77709009390309E-07"
+        iyy="4.35205518595577E-07"
+        iyz="1.01728637895462E-11"
+        izz="2.58474450728914E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_b_bar_2.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_b_bar_2.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_b_bar_2"
+    type="continuous">
+    <origin
+      xyz="-0.0254380979411446 0 -0.0464962705293317"
+      rpy="0 0 0" />
+    <parent
+      link="l_b_bar-1" />
+    <child
+      link="l_b_bar_2" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="l_b_fingers">
+    <inertial>
+      <origin
+        xyz="0.0155125920713094 9.14841522009491E-06 -0.0133066901741014"
+        rpy="0 0 0" />
+      <mass
+        value="0.00951656272415342" />
+      <inertia
+        ixx="1.19518361496346E-06"
+        ixy="4.33295481733529E-11"
+        ixz="2.84796974867858E-07"
+        iyy="1.16036448092124E-06"
+        iyz="3.11882018538181E-10"
+        izz="5.65771187196117E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_b_fingers.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_b_fingers.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_b_fingers"
+    type="continuous">
+    <origin
+      xyz="0.0191548518271974 0 -0.0292932014550815"
+      rpy="0 0 0" />
+    <parent
+      link="l_b_bar_2" />
+    <child
+      link="l_b_fingers" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="l_b_bar_3">
+    <inertial>
+      <origin
+        xyz="0.00168673806352822 5.51128129873679E-05 -0.0272295877741267"
+        rpy="0 0 0" />
+      <mass
+        value="0.00913147869821004" />
+      <inertia
+        ixx="2.10763814349324E-06"
+        ixy="2.09621870291139E-14"
+        ixz="1.5955851168412E-07"
+        iyy="1.59797381104164E-06"
+        iyz="-1.96518108460779E-12"
+        izz="6.74515531056739E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_b_bar_3.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/l_b_bar_3.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_b_bar_3"
+    type="continuous">
+    <origin
+      xyz="-0.0237578932738888 0.584899999999989 -0.135271672920607"
+      rpy="0 0 0" />
+    <parent
+      link="l_hand_pitch" />
+    <child
+      link="l_b_bar_3" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="r_arm_pitch">
+    <inertial>
+      <origin
+        xyz="-0.000828070382794768 0.0221803805437029 0.000355413431685492"
+        rpy="0 0 0" />
+      <mass
+        value="0.184136359575287" />
+      <inertia
+        ixx="0.000308207241858544"
+        ixy="3.38785928990623E-05"
+        ixz="-4.35759192373431E-07"
+        iyy="0.000119956509845959"
+        iyz="2.14753035902003E-06"
+        izz="0.000244420930812077" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_arm_pitch.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_arm_pitch.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_arm_pitch"
+    type="revolute">
+    <origin
+      xyz="-0.0174999999999994 -0.2927 0.3115"
+      rpy="0 0 0" />
+    <parent
+      link="urdf_arm" />
+    <child
+      link="r_arm_pitch" />
+    <axis
+      xyz="0 1 0" />
+    <limit lower="-3.14" upper="1.57" effort="7.5" velocity="9" />
+  </joint>
+  <link
+    name="r_arm_roll">
+    <inertial>
+      <origin
+        xyz="-0.00790852470961278 -4.56417513639007E-06 -0.0465501165062039"
+        rpy="0 0 0" />
+      <mass
+        value="0.207468176547282" />
+      <inertia
+        ixx="0.000457462803151501"
+        ixy="-1.15198974028459E-08"
+        ixz="1.03126038028813E-05"
+        iyy="0.000364196501374006"
+        iyz="2.07666570522255E-08"
+        izz="0.000174508538142169" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_arm_roll.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_arm_roll.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_arm_roll"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="r_arm_pitch" />
+    <child
+      link="r_arm_roll" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.09"
+      upper="0.349"
+      effort="8.5"
+      velocity="9" />
+  </joint>
+  <link
+    name="r_arm_yaw">
+    <inertial>
+      <origin
+        xyz="0.00628203079501941 -0.00107183997285254 -0.208777637267102"
+        rpy="0 0 0" />
+      <mass
+        value="0.481293484952825" />
+      <inertia
+        ixx="0.00105282558432735"
+        ixy="1.05276851232576E-06"
+        ixz="9.28171933199159E-05"
+        iyy="0.00104723759220182"
+        iyz="4.6345481241257E-06"
+        izz="0.000346154688267995" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_arm_yaw.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_arm_yaw.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_arm_yaw"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="r_arm_roll" />
+    <child
+      link="r_arm_yaw" />
+    <axis
+      xyz="0 0 1" />
+      <limit lower="-1.57" upper="1.57" effort="9.5" velocity="9" />
+  </joint>
+  <link
+    name="r_foream">
+    <inertial>
+      <origin
+        xyz="-0.0161078686898049 -0.00142702216013446 -0.0485634479520254"
+        rpy="0 0 0" />
+      <mass
+        value="0.223463041894529" />
+      <inertia
+        ixx="0.000378818781706887"
+        ixy="2.3190122532932E-07"
+        ixz="-4.15645431273828E-05"
+        iyy="0.000498968224963291"
+        iyz="-1.22001481514792E-07"
+        izz="0.000202123697751054" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_foream.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_foream.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_foream"
+    type="revolute">
+    <origin
+      xyz="0.0199999999999998 0 -0.2837"
+      rpy="0 0 0" />
+    <parent
+      link="r_arm_yaw" />
+    <child
+      link="r_foream" />
+    <axis
+      xyz="0 1 0" />
+    <limit lower="-2.62" upper="0.01" effort="0" velocity="0" />
+    <!-- <limit lower="-2.62" upper="1.57" effort="0" velocity="0" /> -->
+  </joint>
+  <link
+    name="r_hand_yaw">
+    <inertial>
+      <origin
+        xyz="-0.00206628806745379 -0.000180941910907839 -0.0507968280945797"
+        rpy="0 0 0" />
+      <mass
+        value="0.17515117163577" />
+      <inertia
+        ixx="0.000227396727945047"
+        ixy="-2.24147344266167E-07"
+        ixz="-2.24496749295539E-06"
+        iyy="0.000195931521293021"
+        iyz="-4.92996655381385E-09"
+        izz="9.47062987496784E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_hand_yaw.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_hand_yaw.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_hand_yaw"
+    type="revolute">
+    <origin
+      xyz="-0.0200000000000001 0 -0.127037274261586"
+      rpy="0 0 0" />
+    <parent
+      link="r_foream" />
+    <child
+      link="r_hand_yaw" />
+    <axis
+      xyz="0 0 1" />
+    <limit lower="-1.57" upper="1.57" effort="11.5" velocity="9" />
+  </joint>
+  <link
+    name="r_hand_roll">
+    <inertial>
+      <origin
+        xyz="-0.00111102295591413 -0.00325842912832869 -0.0133762121197154"
+        rpy="0 0 0" />
+      <mass
+        value="0.0840150150336956" />
+      <inertia
+        ixx="2.64321656840486E-05"
+        ixy="-1.66459675085631E-07"
+        ixz="2.32613802973805E-07"
+        iyy="4.53653859741049E-05"
+        iyz="1.02156140922168E-06"
+        izz="3.38461834268271E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_hand_roll.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_hand_roll.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_hand_roll"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.106462725738415"
+      rpy="0 0 0" />
+    <parent
+      link="r_hand_yaw" />
+    <child
+      link="r_hand_roll" />
+    <axis
+      xyz="1 0 0" />
+    <limit lower="-0.697" upper="1.31" effort="6.5" velocity="9" />
+    <!-- <limit lower="-1.57" upper="1.57" effort="13.5" velocity="9" /> -->
+  </joint>
+  <link
+    name="r_hand_pitch">
+    <inertial>
+      <origin
+        xyz="-2.91341173062759E-05 -0.000381425230524535 -0.0798741942840195"
+        rpy="0 0 0" />
+      <mass
+        value="0.12862305361007" />
+      <inertia
+        ixx="4.95150346726562E-05"
+        ixy="2.08461746311682E-09"
+        ixz="1.29900305264038E-09"
+        iyy="7.22443466755961E-05"
+        iyz="3.91600058100291E-06"
+        izz="5.83907592429026E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_hand_pitch.obj" />
+      </geometry>
+
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_hand_pitch.obj" />
+      </geometry>
+
+    </collision> 
+  </link>
+  <joint
+    name="r_hand_pitch"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.0209999999999999"
+      rpy="0 0 0" />
+    <parent
+      link="r_hand_roll" />
+    <child
+      link="r_hand_pitch" />
+    <axis
+      xyz="0 1 0" />
+    <limit lower="-0.7" upper="0.7" effort="12.5" velocity="9" />
+    <!-- <limit lower="-1.57" upper="1.57" effort="12.5" velocity="9" /> -->
+
+  </joint>
+
+  <link
+    name="r_f_bar-1">
+    <inertial>
+      <origin
+        xyz="0.00725281758894184 7.30388859826459E-06 -0.0105237582198234"
+        rpy="0 0 0" />
+      <mass
+        value="0.00947618050885381" />
+      <inertia
+        ixx="1.97634385843711E-06"
+        ixy="-1.30725965842154E-10"
+        ixz="7.81570592682646E-07"
+        iyy="2.54904752635401E-06"
+        iyz="1.77202474132729E-11"
+        izz="1.16562093364555E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_f_bar-1.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_f_bar-1.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_f_bar-1"
+    type="continuous">
+    <origin
+      xyz="0.0220000003906069 0.000499999999990508 -0.111400000000002"
+      rpy="0 0 0" />
+    <parent
+      link="r_hand_pitch" />
+    <child
+      link="r_f_bar-1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="r_f_bar-2">
+    <inertial>
+      <origin
+        xyz="-0.00783155600627576 -3.80161749358177E-07 -0.0147534045072527"
+        rpy="0 0 0" />
+      <mass
+        value="0.00339831329284509" />
+      <inertia
+        ixx="4.22804474665077E-07"
+        ixy="1.2743609623576E-11"
+        ixz="-1.77709009390325E-07"
+        iyy="4.35205518595521E-07"
+        iyz="-1.01728637960533E-11"
+        izz="2.58474450728884E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_f_bar-2.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_f_bar-2.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_f_bar-2"
+    type="continuous">
+    <origin
+      xyz="0.0254380979411435 0 -0.0464962705293308"
+      rpy="0 0 0" />
+    <parent
+      link="r_f_bar-1" />
+    <child
+      link="r_f_bar-2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="r_f_fingers">
+    <inertial>
+      <origin
+        xyz="-0.0155125920713176 0.000290851584825447 -0.0133066901741032"
+        rpy="0 0 0" />
+      <mass
+        value="0.00951656272415332" />
+      <inertia
+        ixx="1.19518361497846E-06"
+        ixy="4.33295481601776E-11"
+        ixz="-2.84796974860625E-07"
+        iyy="1.1603644809404E-06"
+        iyz="-3.11882018557425E-10"
+        izz="5.65771187200177E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_f_fingers.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_f_fingers.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_f_fingers"
+    type="continuous">
+    <origin
+      xyz="-0.0191548518271969 0 -0.029293201455082"
+      rpy="0 0 0" />
+    <parent
+      link="r_f_bar-2" />
+    <child
+      link="r_f_fingers" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="r_f_bar-3">
+    <inertial>
+      <origin
+        xyz="-0.00168673806354017 -5.51128129872569E-05 -0.0272295877741284"
+        rpy="0 0 0" />
+      <mass
+        value="0.00913147869821008" />
+      <inertia
+        ixx="2.10763814349322E-06"
+        ixy="2.09621760184303E-14"
+        ixz="-1.59558511684128E-07"
+        iyy="1.59797381104166E-06"
+        iyz="1.96518102682214E-12"
+        izz="6.74515531056765E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_f_bar-3.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_f_bar-3.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_f_bar-3"
+    type="continuous">
+    <origin
+      xyz="0.0239578932739069 0.000499999999989675 -0.13527167292061"
+      rpy="0 0 0" />
+    <parent
+      link="r_hand_pitch" />
+    <child
+      link="r_f_bar-3" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="r_b_bar-1">
+    <inertial>
+      <origin
+        xyz="-0.00725281758894075 -7.30388859754294E-06 -0.0105237582198237"
+        rpy="0 0 0" />
+      <mass
+        value="0.00947618050885388" />
+      <inertia
+        ixx="1.97634385843727E-06"
+        ixy="-1.3072596589287E-10"
+        ixz="-7.81570592682577E-07"
+        iyy="2.54904752635409E-06"
+        iyz="-1.77202475155924E-11"
+        izz="1.16562093364548E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_b_bar-1.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_b_bar-1.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_b_bar-1"
+    type="continuous">
+    <origin
+      xyz="-0.0219999996097208 0.000499999999990564 -0.111400000000003"
+      rpy="0 0 0" />
+    <parent
+      link="r_hand_pitch" />
+    <child
+      link="r_b_bar-1" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="r_b_bar-2">
+    <inertial>
+      <origin
+        xyz="0.00783155600627505 3.80164702273866E-07 -0.0147534045072527"
+        rpy="0 0 0" />
+      <mass
+        value="0.00339831329284513" />
+      <inertia
+        ixx="4.22804474665119E-07"
+        ixy="1.27436096403349E-11"
+        ixz="1.77709009390302E-07"
+        iyy="4.35205518595591E-07"
+        iyz="1.017286378448E-11"
+        izz="2.5847445072893E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_b_bar-2.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_b_bar-2.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_b_bar-2"
+    type="continuous">
+    <origin
+      xyz="-0.025438097941145 0 -0.0464962705293318"
+      rpy="0 0 0" />
+    <parent
+      link="r_b_bar-1" />
+    <child
+      link="r_b_bar-2" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="r_b_fingers">
+    <inertial>
+      <origin
+        xyz="0.015512592071317 0.000309148415223059 -0.0133066901741017"
+        rpy="0 0 0" />
+      <mass
+        value="0.00951656272415284" />
+      <inertia
+        ixx="1.19518361502277E-06"
+        ixy="4.3329548194039E-11"
+        ixz="2.84796974865924E-07"
+        iyy="1.16036448098208E-06"
+        iyz="3.11882018368708E-10"
+        izz="5.65771187197506E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_b_fingers.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_b_fingers.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_b_fingers"
+    type="continuous">
+    <origin
+      xyz="0.0191548518271976 0 -0.0292932014550811"
+      rpy="0 0 0" />
+    <parent
+      link="r_b_bar-2" />
+    <child
+      link="r_b_fingers" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="r_b_bar-3">
+    <inertial>
+      <origin
+        xyz="0.00168673806354011 5.51128129861467E-05 -0.0272295877741285"
+        rpy="0 0 0" />
+      <mass
+        value="0.00913147869820997" />
+      <inertia
+        ixx="2.10763814349322E-06"
+        ixy="2.09621789754513E-14"
+        ixz="1.59558511684126E-07"
+        iyy="1.5979738110417E-06"
+        iyz="-1.96518112490246E-12"
+        izz="6.74515531056802E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_b_bar-3.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/r_b_bar-3.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_b_bar-3"
+    type="continuous">
+    <origin
+      xyz="-0.0239578924930219 0.000499999999989675 -0.13527167292061"
+      rpy="0 0 0" />
+    <parent
+      link="r_hand_pitch" />
+    <child
+      link="r_b_bar-3" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="head_pitch_motor">
+    <inertial>
+      <origin
+        xyz="2.15064692521312E-05 0.0060485397407308 -0.0105235281816768"
+        rpy="0 0 0" />
+      <mass
+        value="0.0736988170115525" />
+      <inertia
+        ixx="3.67348067267319E-05"
+        ixy="6.73619780094987E-08"
+        ixz="-2.37137268464132E-08"
+        iyy="4.13511095677461E-05"
+        iyz="-7.39465521015481E-06"
+        izz="3.68282513893872E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/head_pitch_motor.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/head_pitch_motor.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_pitch_motor"
+    type="revolute">
+    <origin
+      xyz="-0.0184999999351704 0 0.488400000086134"
+      rpy="0 0 0" />
+    <parent
+      link="urdf_arm" />
+    <child
+      link="head_pitch_motor" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="head">
+    <inertial>
+      <origin
+        xyz="0.0270543321696196 -0.000611241791026834 0.108993350171997"
+        rpy="0 0 0" />
+      <mass
+        value="0.604629438749788" />
+      <inertia
+        ixx="0.00220911712019339"
+        ixy="4.4908476911183E-06"
+        ixz="0.000409391213149813"
+        iyy="0.00215799979792596"
+        iyz="1.35756758490623E-05"
+        izz="0.00193855033637337" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/head.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/head.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="head_pitch_motor" />
+    <child
+      link="head" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.52"
+      upper="0.52"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="head_camera">
+    <inertial>
+      <origin
+        xyz="-0.00630026061866237 -0.016049154506062 -4.88215811403903E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0170256015508832" />
+      <inertia
+        ixx="1.0918264029313E-05"
+        ixy="-1.05354408167635E-07"
+        ixz="-1.05871497323788E-08"
+        iyy="8.57178950734429E-07"
+        iyz="-1.64018651463633E-08"
+        izz="1.02869893338383E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/head_camera.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/head_camera.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_camera"
+    type="fixed">
+    <origin
+      xyz="0.0974492283101479 0.0174530823583079 0.125581998333391"
+      rpy="0 0.488692190558416 0" />
+    <parent
+      link="head" />
+    <child
+      link="head_camera" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="chassis">
+    <inertial>
+      <origin
+        xyz="-0.110380513403178 0.00343228442866415 0.301012831407109"
+        rpy="0 0 0" />
+      <mass
+        value="25.7952070329592" />
+      <inertia
+        ixx="0.537052764714304"
+        ixy="-0.000287323661197991"
+        ixz="7.17473719458976E-05"
+        iyy="0.512011387431763"
+        iyz="-4.98738216391436E-05"
+        izz="0.532129233554971" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/chassis.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/chassis.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chassis"
+    type="prismatic">
+    <origin
+      xyz="-0.208425065806821 0 -0.454500000000001"
+      rpy="0 0 0" />
+    <parent
+      link="urdf_arm" />
+    <child
+      link="chassis" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.6"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="camera_torso">
+    <inertial>
+      <origin
+        xyz="-0.00629451575980258 -0.0161363809954276 -0.000627399255521022"
+        rpy="0 0 0" />
+      <mass
+        value="0.0174035563465764" />
+      <inertia
+        ixx="1.14512648371916E-05"
+        ixy="-1.06865323527971E-07"
+        ixz="2.15531841453902E-08"
+        iyy="1.01358420465748E-06"
+        iyz="-9.98083555754382E-09"
+        izz="1.06808111754815E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/camera_torso.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/camera_torso.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_torso"
+    type="fixed">
+    <origin
+      xyz="0.115075952675679 0.01749999999949 0.27587244861972"
+      rpy="0 0.855211333477246 0" />
+    <parent
+      link="urdf_arm" />
+    <child
+      link="camera_torso" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+</robot>

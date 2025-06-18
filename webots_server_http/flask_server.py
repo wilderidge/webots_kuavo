@@ -1,13 +1,25 @@
 # flask_server.py (修改后的完整文件)
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, send_file
 from flask_cors import CORS
 from collections import deque
 import threading
+import cv2
 import time
 import logging
 import json
 import os
 from datetime import datetime # 导入 datetime 模块
+import io
+from PIL import Image
+import numpy as np
+import sys
+import os
+import base64
+
+# 添加控制器目录到系统路径
+controller_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 
+                             'Webots_PR2_Path_Planning', 'controllers', 'BFS_exercise_1')
+sys.path.append(controller_path)
 
 app = Flask(__name__)
 CORS(app)
@@ -24,6 +36,9 @@ request_response_log = []
 
 # 专门存储来自 supervisor 的世界状态更新数据
 supervisor_world_status_log = []
+
+# 存储最新的相机图像
+latest_camera_image = None
 
 # 创建 logs 目录 (如果不存在)
 log_dir = "logs"
@@ -177,6 +192,55 @@ def handle_set_goal(data):
     robot_goal = tuple(data.get('goal'))
     print(f"WebSocket: Received goal {robot_goal}")
     emit('status', {"message": f"Goal set to {robot_goal}"}, broadcast=True)
+
+# 新增：获取相机图像的路由
+# 新增深度图存储和获取接口
+@app.route('/camera_status', methods=['POST'])
+def update_camera_status():
+    global latest_camera_image, latest_depth_image
+    try:
+        data = request.get_json()
+        if 'image' in data:
+            latest_camera_image = data['image']
+        if 'depth_image' in data:
+            latest_depth_image = data['depth_image']
+        return jsonify({"status": "success"}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/get_depth_image', methods=['GET'])
+def get_depth_image():
+    global latest_depth_image
+    try:
+        if latest_depth_image is None:
+            return jsonify({"error": "No camera image available"}), 404
+            
+        # 解码base64图像
+        image_data = base64.b64decode(latest_depth_image)
+        
+        # 创建一个字节流
+        img_io = io.BytesIO(image_data)
+        
+        return send_file(img_io, mimetype='image/png')
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/get_camera_image', methods=['GET'])
+def get_camera_image():
+    global latest_camera_image
+    try:
+        if latest_camera_image is None:
+            return jsonify({"error": "No camera image available"}), 404
+            
+        # 解码base64图像
+        image_data = base64.b64decode(latest_camera_image)
+        
+        # 创建一个字节流
+        img_io = io.BytesIO(image_data)
+        
+        return send_file(img_io, mimetype='image/png')
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 # --- 服务结束时保存主日志文件 ---
 def save_main_log_on_exit():

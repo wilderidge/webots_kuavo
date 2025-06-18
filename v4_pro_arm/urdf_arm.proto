@@ -1,0 +1,1305 @@
+#VRML_SIM R2023b utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is a proto file for Webots for the urdf_arm
+# Extracted from: D:\project\webots_flask_server_http\v4_pro_arm\urdf\urdf_arm.urdf
+
+PROTO urdf_arm [
+  field  SFVec3f     translation     0 0 0
+  field  SFRotation  rotation        0 0 1 0
+  field  SFString    name            "urdf_arm"  # Is `Robot.name`.
+  field  SFString    controller      "void"      # Is `Robot.controller`.
+  field  MFString    controllerArgs  []          # Is `Robot.controllerArgs`.
+  field  SFString    customData      ""          # Is `Robot.customData`.
+  field  SFBool      supervisor      FALSE       # Is `Robot.supervisor`.
+  field  SFBool      synchronization TRUE        # Is `Robot.synchronization`.
+  field  SFBool      selfCollision   FALSE       # Is `Robot.selfCollision`.
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    controller IS controller
+    controllerArgs IS controllerArgs
+    customData IS customData
+    supervisor IS supervisor
+    synchronization IS synchronization
+    selfCollision IS selfCollision
+    children [
+      DEF urdf_arm_visual CadShape {
+        url "v4_pro_arm\meshes\urdf_arm.obj"
+      }
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          axis 0.000000 1.000000 0.000000
+          anchor -0.017500 0.292700 0.310396
+        }
+        device [
+          RotationalMotor {
+            name "l_arm_pitch"
+            maxVelocity 9.0
+            minPosition -3.14
+            maxPosition 1.57
+            maxTorque 0.5
+          }
+          PositionSensor {
+            name "l_arm_pitch_sensor"
+          }
+        ]
+        endPoint Solid {
+          translation -0.017500 0.292700 0.310396
+          children [
+            DEF l_arm_pitch_visual CadShape {
+              url "v4_pro_arm\meshes\l_arm_pitch.obj"
+            }
+            HingeJoint {
+              jointParameters HingeJointParameters {
+              }
+              device [
+                RotationalMotor {
+                  name "l_arm_roll"
+                  maxVelocity 9.0
+                  minPosition -0.3489
+                  maxPosition 2.0933
+                  maxTorque 1.5
+                }
+                PositionSensor {
+                  name "l_arm_roll_sensor"
+                }
+              ]
+              endPoint Solid {
+                children [
+                  DEF l_arm_roll_visual CadShape {
+                    url "v4_pro_arm\meshes\l_arm_roll.obj"
+                  }
+                  HingeJoint {
+                    jointParameters HingeJointParameters {
+                      axis 0.000000 0.000000 1.000000
+                    }
+                    device [
+                      RotationalMotor {
+                        name "l_arm_yaw"
+                        maxVelocity 9.0
+                        minPosition -1.57
+                        maxPosition 1.57
+                        maxTorque 2.5
+                      }
+                      PositionSensor {
+                        name "l_arm_yaw_sensor"
+                      }
+                    ]
+                    endPoint Solid {
+                      children [
+                        DEF l_arm_yaw_visual CadShape {
+                          url "v4_pro_arm\meshes\l_arm_yaw.obj"
+                        }
+                        HingeJoint {
+                          jointParameters HingeJointParameters {
+                            axis 0.000000 1.000000 0.000000
+                            anchor 0.020000 0.000000 -0.282596
+                          }
+                          device [
+                            RotationalMotor {
+                              name "l_foream"
+                              minPosition -2.62
+                              maxPosition 0.01
+                              maxTorque 10000
+                            }
+                            PositionSensor {
+                              name "l_foream_sensor"
+                            }
+                          ]
+                          endPoint Solid {
+                            translation 0.020000 0.000000 -0.282596
+                            children [
+                              DEF l_foream_visual CadShape {
+                                url "v4_pro_arm\meshes\l_foream.obj"
+                              }
+                              HingeJoint {
+                                jointParameters HingeJointParameters {
+                                  axis 0.000000 0.000000 1.000000
+                                  anchor -0.020000 0.000000 -0.127037
+                                }
+                                device [
+                                  RotationalMotor {
+                                    name "l_hand_yaw"
+                                    maxVelocity 9.0
+                                    minPosition -1.57
+                                    maxPosition 1.57
+                                    maxTorque 4.5
+                                  }
+                                  PositionSensor {
+                                    name "l_hand_yaw_sensor"
+                                  }
+                                ]
+                                endPoint Solid {
+                                  translation -0.020000 0.000000 -0.127037
+                                  children [
+                                    DEF l_hand_yaw_visual CadShape {
+                                      url "v4_pro_arm\meshes\l_hand_yaw.obj"
+                                    }
+                                    HingeJoint {
+                                      jointParameters HingeJointParameters {
+                                        anchor 0.000200 0.000000 -0.106463
+                                      }
+                                      device [
+                                        RotationalMotor {
+                                          name "l_hand_roll"
+                                          maxVelocity 9.0
+                                          minPosition -1.31
+                                          maxPosition 0.697
+                                          maxTorque 6.5
+                                        }
+                                        PositionSensor {
+                                          name "l_hand_roll_sensor"
+                                        }
+                                      ]
+                                      endPoint Solid {
+                                        translation 0.000200 0.000000 -0.106463
+                                        children [
+                                          DEF l_hand_roll_visual CadShape {
+                                            url "v4_pro_arm\meshes\l_hand_roll.obj"
+                                          }
+                                          HingeJoint {
+                                            jointParameters HingeJointParameters {
+                                              axis 0.000000 1.000000 0.000000
+                                              anchor 0.000000 0.000000 -0.021000
+                                            }
+                                            device [
+                                              RotationalMotor {
+                                                name "l_hand_pitch"
+                                                maxVelocity 9.0
+                                                minPosition -0.7
+                                                maxPosition 0.7
+                                                maxTorque 5.5
+                                              }
+                                              PositionSensor {
+                                                name "l_hand_pitch_sensor"
+                                              }
+                                            ]
+                                            endPoint Solid {
+                                              translation 0.000000 0.000000 -0.021000
+                                              children [
+                                                DEF r_hand_pitch_visual CadShape {
+                                                  url "v4_pro_arm\meshes\r_hand_pitch.obj"
+                                                }
+                                                HingeJoint {
+                                                  jointParameters HingeJointParameters {
+                                                    axis 0.000000 1.000000 0.000000
+                                                    anchor 0.022200 0.584900 -0.111400
+                                                  }
+                                                  device [
+                                                    RotationalMotor {
+                                                      name "l_f_bar-1"
+                                                      maxTorque 10000
+                                                    }
+                                                    PositionSensor {
+                                                      name "l_f_bar-1_sensor"
+                                                    }
+                                                  ]
+                                                  endPoint Solid {
+                                                    translation 0.022200 0.584900 -0.111400
+                                                    children [
+                                                      DEF l_f_bar-1_visual CadShape {
+                                                        url "v4_pro_arm\meshes\l_f_bar-1.obj"
+                                                      }
+                                                      HingeJoint {
+                                                        jointParameters HingeJointParameters {
+                                                          axis 0.000000 1.000000 0.000000
+                                                          anchor 0.025438 0.000000 -0.046496
+                                                        }
+                                                        device [
+                                                          RotationalMotor {
+                                                            name "l_f_bar-2"
+                                                            maxTorque 10000
+                                                          }
+                                                          PositionSensor {
+                                                            name "l_f_bar-2_sensor"
+                                                          }
+                                                        ]
+                                                        endPoint Solid {
+                                                          translation 0.025438 0.000000 -0.046496
+                                                          children [
+                                                            DEF l_f_bar-2_visual CadShape {
+                                                              url "v4_pro_arm\meshes\l_f_bar-2.obj"
+                                                            }
+                                                            HingeJoint {
+                                                              jointParameters HingeJointParameters {
+                                                                axis 0.000000 -1.000000 0.000000
+                                                                anchor -0.019155 0.000000 -0.029293
+                                                              }
+                                                              device [
+                                                                RotationalMotor {
+                                                                  name "l_f_fingers"
+                                                                  maxTorque 10000
+                                                                }
+                                                                PositionSensor {
+                                                                  name "l_f_fingers_sensor"
+                                                                }
+                                                              ]
+                                                              endPoint Solid {
+                                                                translation -0.019155 0.000000 -0.029293
+                                                                children [
+                                                                  DEF l_f_fingers_visual CadShape {
+                                                                    url "v4_pro_arm\meshes\l_f_fingers.obj"
+                                                                  }
+                                                                ]
+                                                                name "l_f_fingers"
+                                                                boundingObject DEF l_f_fingers Mesh {
+                                                                  url "v4_pro_arm\meshes\l_f_fingers.obj"
+                                                                }
+                                                                physics Physics {
+                                                                  density -1
+                                                                  mass 0.009517
+                                                                  centerOfMass [ -0.015513 -0.000009 -0.013307 ]
+                                                                  inertiaMatrix [
+                                                                    1.195184e-06 1.160364e-06 5.657712e-07
+                                                                    4.332955e-11 -2.847970e-07 -3.118820e-10
+                                                                  ]
+                                                                }
+                                                              }
+                                                            }
+                                                          ]
+                                                          name "l_f_bar-2"
+                                                          boundingObject DEF l_f_bar-2 Mesh {
+                                                            url "v4_pro_arm\meshes\l_f_bar-2.obj"
+                                                          }
+                                                          physics Physics {
+                                                            density -1
+                                                            mass 0.003398
+                                                            centerOfMass [ -0.007832 -0.000000 -0.014753 ]
+                                                            inertiaMatrix [
+                                                              4.228045e-07 4.352055e-07 2.584745e-07
+                                                              1.274361e-11 -1.777090e-07 -1.017286e-11
+                                                            ]
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                    name "l_f_bar-1"
+                                                    boundingObject DEF l_f_bar-1 Mesh {
+                                                      url "v4_pro_arm\meshes\l_f_bar-1.obj"
+                                                    }
+                                                    physics Physics {
+                                                      density -1
+                                                      mass 0.009476
+                                                      centerOfMass [ 0.007253 0.000007 -0.010524 ]
+                                                      inertiaMatrix [
+                                                        1.976344e-06 2.549048e-06 1.165621e-06
+                                                        -1.307260e-10 7.815706e-07 1.772025e-11
+                                                      ]
+                                                    }
+                                                  }
+                                                }
+                                                HingeJoint {
+                                                  jointParameters HingeJointParameters {
+                                                    axis 0.000000 1.000000 0.000000
+                                                    anchor 0.024158 0.584900 -0.135272
+                                                  }
+                                                  device [
+                                                    RotationalMotor {
+                                                      name "l_f_bar-3"
+                                                      maxTorque 10000
+                                                    }
+                                                    PositionSensor {
+                                                      name "l_f_bar-3_sensor"
+                                                    }
+                                                  ]
+                                                  endPoint Solid {
+                                                    translation 0.024158 0.584900 -0.135272
+                                                    children [
+                                                      DEF l_f_bar-3_visual CadShape {
+                                                        url "v4_pro_arm\meshes\l_f_bar-3.obj"
+                                                      }
+                                                    ]
+                                                    name "l_f_bar-3"
+                                                    boundingObject DEF l_f_bar-3 Mesh {
+                                                      url "v4_pro_arm\meshes\l_f_bar-3.obj"
+                                                    }
+                                                    physics Physics {
+                                                      density -1
+                                                      mass 0.009131
+                                                      centerOfMass [ -0.001687 -0.000055 -0.027230 ]
+                                                      inertiaMatrix [
+                                                        2.107638e-06 1.597974e-06 6.745155e-07
+                                                        2.096219e-14 -1.595585e-07 1.965181e-12
+                                                      ]
+                                                    }
+                                                  }
+                                                }
+                                                HingeJoint {
+                                                  jointParameters HingeJointParameters {
+                                                    axis 0.000000 -1.000000 0.000000
+                                                    anchor -0.021800 0.584900 -0.111400
+                                                  }
+                                                  device [
+                                                    RotationalMotor {
+                                                      name "l_b_bar-1"
+                                                      maxTorque 10000
+                                                    }
+                                                    PositionSensor {
+                                                      name "l_b_bar-1_sensor"
+                                                    }
+                                                  ]
+                                                  endPoint Solid {
+                                                    translation -0.021800 0.584900 -0.111400
+                                                    children [
+                                                      DEF l_b_bar-1_visual CadShape {
+                                                        url "v4_pro_arm\meshes\l_b_bar-1.obj"
+                                                      }
+                                                      HingeJoint {
+                                                        jointParameters HingeJointParameters {
+                                                          axis 0.000000 -1.000000 0.000000
+                                                          anchor -0.025438 0.000000 -0.046496
+                                                        }
+                                                        device [
+                                                          RotationalMotor {
+                                                            name "l_b_bar_2"
+                                                            maxTorque 10000
+                                                          }
+                                                          PositionSensor {
+                                                            name "l_b_bar_2_sensor"
+                                                          }
+                                                        ]
+                                                        endPoint Solid {
+                                                          translation -0.025438 0.000000 -0.046496
+                                                          children [
+                                                            DEF l_b_bar_2_visual CadShape {
+                                                              url "v4_pro_arm\meshes\l_b_bar_2.obj"
+                                                            }
+                                                            HingeJoint {
+                                                              jointParameters HingeJointParameters {
+                                                                axis 0.000000 -1.000000 0.000000
+                                                                anchor 0.019155 0.000000 -0.029293
+                                                              }
+                                                              device [
+                                                                RotationalMotor {
+                                                                  name "l_b_fingers"
+                                                                  maxTorque 10000
+                                                                }
+                                                                PositionSensor {
+                                                                  name "l_b_fingers_sensor"
+                                                                }
+                                                              ]
+                                                              endPoint Solid {
+                                                                translation 0.019155 0.000000 -0.029293
+                                                                children [
+                                                                  DEF l_b_fingers_visual CadShape {
+                                                                    url "v4_pro_arm\meshes\l_b_fingers.obj"
+                                                                  }
+                                                                ]
+                                                                name "l_b_fingers"
+                                                                boundingObject DEF l_b_fingers Mesh {
+                                                                  url "v4_pro_arm\meshes\l_b_fingers.obj"
+                                                                }
+                                                                physics Physics {
+                                                                  density -1
+                                                                  mass 0.009517
+                                                                  centerOfMass [ 0.015513 0.000009 -0.013307 ]
+                                                                  inertiaMatrix [
+                                                                    1.195184e-06 1.160364e-06 5.657712e-07
+                                                                    4.332955e-11 2.847970e-07 3.118820e-10
+                                                                  ]
+                                                                }
+                                                              }
+                                                            }
+                                                          ]
+                                                          name "l_b_bar_2"
+                                                          boundingObject DEF l_b_bar_2 Mesh {
+                                                            url "v4_pro_arm\meshes\l_b_bar_2.obj"
+                                                          }
+                                                          physics Physics {
+                                                            density -1
+                                                            mass 0.003398
+                                                            centerOfMass [ 0.007832 0.000000 -0.014753 ]
+                                                            inertiaMatrix [
+                                                              4.228045e-07 4.352055e-07 2.584745e-07
+                                                              1.274361e-11 1.777090e-07 1.017286e-11
+                                                            ]
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                    name "l_b_bar-1"
+                                                    boundingObject DEF l_b_bar-1 Mesh {
+                                                      url "v4_pro_arm\meshes\l_b_bar-1.obj"
+                                                    }
+                                                    physics Physics {
+                                                      density -1
+                                                      mass 0.009476
+                                                      centerOfMass [ -0.007253 -0.000007 -0.010524 ]
+                                                      inertiaMatrix [
+                                                        1.976344e-06 2.549048e-06 1.165621e-06
+                                                        -1.307260e-10 -7.815706e-07 -1.772025e-11
+                                                      ]
+                                                    }
+                                                  }
+                                                }
+                                                HingeJoint {
+                                                  jointParameters HingeJointParameters {
+                                                    axis 0.000000 -1.000000 0.000000
+                                                    anchor -0.023758 0.584900 -0.135272
+                                                  }
+                                                  device [
+                                                    RotationalMotor {
+                                                      name "l_b_bar_3"
+                                                      maxTorque 10000
+                                                    }
+                                                    PositionSensor {
+                                                      name "l_b_bar_3_sensor"
+                                                    }
+                                                  ]
+                                                  endPoint Solid {
+                                                    translation -0.023758 0.584900 -0.135272
+                                                    children [
+                                                      DEF l_b_bar_3_visual CadShape {
+                                                        url "v4_pro_arm\meshes\l_b_bar_3.obj"
+                                                      }
+                                                    ]
+                                                    name "l_b_bar_3"
+                                                    boundingObject DEF l_b_bar_3 Mesh {
+                                                      url "v4_pro_arm\meshes\l_b_bar_3.obj"
+                                                    }
+                                                    physics Physics {
+                                                      density -1
+                                                      mass 0.009131
+                                                      centerOfMass [ 0.001687 0.000055 -0.027230 ]
+                                                      inertiaMatrix [
+                                                        2.107638e-06 1.597974e-06 6.745155e-07
+                                                        2.096219e-14 1.595585e-07 -1.965181e-12
+                                                      ]
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                              name "l_hand_pitch"
+                                              boundingObject DEF r_hand_pitch Mesh {
+                                                url "v4_pro_arm\meshes\r_hand_pitch.obj"
+                                              }
+                                              physics Physics {
+                                                density -1
+                                                mass 0.128052
+                                                centerOfMass [ -0.000029 0.000381 -0.079874 ]
+                                                inertiaMatrix [
+                                                  4.951252e-05 7.224212e-05 5.838678e-05
+                                                  2.086553e-09 -1.299211e-09 -3.916000e-06
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        ]
+                                        name "l_hand_roll"
+                                        boundingObject DEF l_hand_roll Mesh {
+                                          url "v4_pro_arm\meshes\l_hand_roll.obj"
+                                        }
+                                        physics Physics {
+                                          density -1
+                                          mass 0.084014
+                                          centerOfMass [ -0.001111 0.003259 -0.013376 ]
+                                          inertiaMatrix [
+                                            2.643195e-05 4.536474e-05 3.384537e-05
+                                            1.664994e-07 2.319623e-07 -1.021538e-06
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  ]
+                                  name "l_hand_yaw"
+                                  boundingObject DEF l_hand_yaw Mesh {
+                                    url "v4_pro_arm\meshes\l_hand_yaw.obj"
+                                  }
+                                  physics Physics {
+                                    density -1
+                                    mass 0.175138
+                                    centerOfMass [ -0.002073 0.000181 -0.050795 ]
+                                    inertiaMatrix [
+                                      2.273848e-04 1.959229e-04 9.470408e-05
+                                      2.263413e-07 -2.245975e-06 1.595305e-09
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                            name "l_foream"
+                            boundingObject DEF l_foream Mesh {
+                              url "v4_pro_arm\meshes\l_foream.obj"
+                            }
+                            physics Physics {
+                              density -1
+                              mass 0.223498
+                              centerOfMass [ -0.016108 0.001434 -0.048560 ]
+                              inertiaMatrix [
+                                3.788104e-04 4.989644e-04 2.021252e-04
+                                -2.164870e-07 -4.156300e-05 1.251340e-07
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                      name "l_arm_yaw"
+                      boundingObject DEF l_arm_yaw Mesh {
+                        url "v4_pro_arm\meshes\l_arm_yaw.obj"
+                      }
+                      physics Physics {
+                        density -1
+                        mass 0.481290
+                        centerOfMass [ 0.006283 0.001069 -0.207673 ]
+                        inertiaMatrix [
+                          1.052823e-03 1.047234e-03 3.461481e-04
+                          -1.065764e-06 9.281241e-05 -4.639178e-06
+                        ]
+                      }
+                    }
+                  }
+                ]
+                name "l_arm_roll"
+                boundingObject DEF l_arm_roll Mesh {
+                  url "v4_pro_arm\meshes\l_arm_roll.obj"
+                }
+                physics Physics {
+                  density -1
+                  mass 0.207465
+                  centerOfMass [ -0.007911 -0.000005 -0.045448 ]
+                  inertiaMatrix [
+                    4.574392e-04 3.641973e-04 1.744695e-04
+                    -4.582781e-09 1.031620e-05 2.244339e-08
+                  ]
+                }
+              }
+            }
+          ]
+          name "l_arm_pitch"
+          boundingObject DEF l_arm_pitch Mesh {
+            url "v4_pro_arm\meshes\l_arm_pitch.obj"
+          }
+          physics Physics {
+            density -1
+            mass 0.184136
+            centerOfMass [ -0.000828 -0.022181 0.001459 ]
+            inertiaMatrix [
+              3.082085e-04 1.199629e-04 2.444158e-04
+              -3.387872e-05 -4.358683e-07 -2.150261e-06
+            ]
+          }
+        }
+      }
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          axis 0.000000 1.000000 0.000000
+          anchor -0.017500 -0.292700 0.311500
+        }
+        device [
+          RotationalMotor {
+            name "r_arm_pitch"
+            maxVelocity 9.0
+            minPosition -3.14
+            maxPosition 1.57
+            maxTorque 7.5
+          }
+          PositionSensor {
+            name "r_arm_pitch_sensor"
+          }
+        ]
+        endPoint Solid {
+          translation -0.017500 -0.292700 0.311500
+          children [
+            DEF r_arm_pitch_visual CadShape {
+              url "v4_pro_arm\meshes\r_arm_pitch.obj"
+            }
+            HingeJoint {
+              jointParameters HingeJointParameters {
+              }
+              device [
+                RotationalMotor {
+                  name "r_arm_roll"
+                  maxVelocity 9.0
+                  minPosition -2.09
+                  maxPosition 0.349
+                  maxTorque 8.5
+                }
+                PositionSensor {
+                  name "r_arm_roll_sensor"
+                }
+              ]
+              endPoint Solid {
+                children [
+                  DEF r_arm_roll_visual CadShape {
+                    url "v4_pro_arm\meshes\r_arm_roll.obj"
+                  }
+                  HingeJoint {
+                    jointParameters HingeJointParameters {
+                      axis 0.000000 0.000000 1.000000
+                    }
+                    device [
+                      RotationalMotor {
+                        name "r_arm_yaw"
+                        maxVelocity 9.0
+                        minPosition -1.57
+                        maxPosition 1.57
+                        maxTorque 9.5
+                      }
+                      PositionSensor {
+                        name "r_arm_yaw_sensor"
+                      }
+                    ]
+                    endPoint Solid {
+                      children [
+                        DEF r_arm_yaw_visual CadShape {
+                          url "v4_pro_arm\meshes\r_arm_yaw.obj"
+                        }
+                        HingeJoint {
+                          jointParameters HingeJointParameters {
+                            axis 0.000000 1.000000 0.000000
+                            anchor 0.020000 0.000000 -0.283700
+                          }
+                          device [
+                            RotationalMotor {
+                              name "r_foream"
+                              minPosition -2.62
+                              maxPosition 0.01
+                              maxTorque 10000
+                            }
+                            PositionSensor {
+                              name "r_foream_sensor"
+                            }
+                          ]
+                          endPoint Solid {
+                            translation 0.020000 0.000000 -0.283700
+                            children [
+                              DEF r_foream_visual CadShape {
+                                url "v4_pro_arm\meshes\r_foream.obj"
+                              }
+                              HingeJoint {
+                                jointParameters HingeJointParameters {
+                                  axis 0.000000 0.000000 1.000000
+                                  anchor -0.020000 0.000000 -0.127037
+                                }
+                                device [
+                                  RotationalMotor {
+                                    name "r_hand_yaw"
+                                    maxVelocity 9.0
+                                    minPosition -1.57
+                                    maxPosition 1.57
+                                    maxTorque 11.5
+                                  }
+                                  PositionSensor {
+                                    name "r_hand_yaw_sensor"
+                                  }
+                                ]
+                                endPoint Solid {
+                                  translation -0.020000 0.000000 -0.127037
+                                  children [
+                                    DEF r_hand_yaw_visual CadShape {
+                                      url "v4_pro_arm\meshes\r_hand_yaw.obj"
+                                    }
+                                    HingeJoint {
+                                      jointParameters HingeJointParameters {
+                                        anchor 0.000000 0.000000 -0.106463
+                                      }
+                                      device [
+                                        RotationalMotor {
+                                          name "r_hand_roll"
+                                          maxVelocity 9.0
+                                          minPosition -0.697
+                                          maxPosition 1.31
+                                          maxTorque 6.5
+                                        }
+                                        PositionSensor {
+                                          name "r_hand_roll_sensor"
+                                        }
+                                      ]
+                                      endPoint Solid {
+                                        translation 0.000000 0.000000 -0.106463
+                                        children [
+                                          DEF r_hand_roll_visual CadShape {
+                                            url "v4_pro_arm\meshes\r_hand_roll.obj"
+                                          }
+                                          HingeJoint {
+                                            jointParameters HingeJointParameters {
+                                              axis 0.000000 1.000000 0.000000
+                                              anchor 0.000000 0.000000 -0.021000
+                                            }
+                                            device [
+                                              RotationalMotor {
+                                                name "r_hand_pitch"
+                                                maxVelocity 9.0
+                                                minPosition -0.7
+                                                maxPosition 0.7
+                                                maxTorque 12.5
+                                              }
+                                              PositionSensor {
+                                                name "r_hand_pitch_sensor"
+                                              }
+                                            ]
+                                            endPoint Solid {
+                                              translation 0.000000 0.000000 -0.021000
+                                              children [
+                                                USE r_hand_pitch_visual
+                                                HingeJoint {
+                                                  jointParameters HingeJointParameters {
+                                                    axis 0.000000 1.000000 0.000000
+                                                    anchor 0.022000 0.000500 -0.111400
+                                                  }
+                                                  device [
+                                                    RotationalMotor {
+                                                      name "r_f_bar-1"
+                                                      maxTorque 10000
+                                                    }
+                                                    PositionSensor {
+                                                      name "r_f_bar-1_sensor"
+                                                    }
+                                                  ]
+                                                  endPoint Solid {
+                                                    translation 0.022000 0.000500 -0.111400
+                                                    children [
+                                                      DEF r_f_bar-1_visual CadShape {
+                                                        url "v4_pro_arm\meshes\r_f_bar-1.obj"
+                                                      }
+                                                      HingeJoint {
+                                                        jointParameters HingeJointParameters {
+                                                          axis 0.000000 1.000000 0.000000
+                                                          anchor 0.025438 0.000000 -0.046496
+                                                        }
+                                                        device [
+                                                          RotationalMotor {
+                                                            name "r_f_bar-2"
+                                                            maxTorque 10000
+                                                          }
+                                                          PositionSensor {
+                                                            name "r_f_bar-2_sensor"
+                                                          }
+                                                        ]
+                                                        endPoint Solid {
+                                                          translation 0.025438 0.000000 -0.046496
+                                                          children [
+                                                            DEF r_f_bar-2_visual CadShape {
+                                                              url "v4_pro_arm\meshes\r_f_bar-2.obj"
+                                                            }
+                                                            HingeJoint {
+                                                              jointParameters HingeJointParameters {
+                                                                axis 0.000000 1.000000 0.000000
+                                                                anchor -0.019155 0.000000 -0.029293
+                                                              }
+                                                              device [
+                                                                RotationalMotor {
+                                                                  name "r_f_fingers"
+                                                                  maxTorque 10000
+                                                                }
+                                                                PositionSensor {
+                                                                  name "r_f_fingers_sensor"
+                                                                }
+                                                              ]
+                                                              endPoint Solid {
+                                                                translation -0.019155 0.000000 -0.029293
+                                                                children [
+                                                                  DEF r_f_fingers_visual CadShape {
+                                                                    url "v4_pro_arm\meshes\r_f_fingers.obj"
+                                                                  }
+                                                                ]
+                                                                name "r_f_fingers"
+                                                                boundingObject DEF r_f_fingers Mesh {
+                                                                  url "v4_pro_arm\meshes\r_f_fingers.obj"
+                                                                }
+                                                                physics Physics {
+                                                                  density -1
+                                                                  mass 0.009517
+                                                                  centerOfMass [ -0.015513 0.000291 -0.013307 ]
+                                                                  inertiaMatrix [
+                                                                    1.195184e-06 1.160364e-06 5.657712e-07
+                                                                    4.332955e-11 -2.847970e-07 -3.118820e-10
+                                                                  ]
+                                                                }
+                                                              }
+                                                            }
+                                                          ]
+                                                          name "r_f_bar-2"
+                                                          boundingObject DEF r_f_bar-2 Mesh {
+                                                            url "v4_pro_arm\meshes\r_f_bar-2.obj"
+                                                          }
+                                                          physics Physics {
+                                                            density -1
+                                                            mass 0.003398
+                                                            centerOfMass [ -0.007832 -0.000000 -0.014753 ]
+                                                            inertiaMatrix [
+                                                              4.228045e-07 4.352055e-07 2.584745e-07
+                                                              1.274361e-11 -1.777090e-07 -1.017286e-11
+                                                            ]
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                    name "r_f_bar-1"
+                                                    boundingObject DEF r_f_bar-1 Mesh {
+                                                      url "v4_pro_arm\meshes\r_f_bar-1.obj"
+                                                    }
+                                                    physics Physics {
+                                                      density -1
+                                                      mass 0.009476
+                                                      centerOfMass [ 0.007253 0.000007 -0.010524 ]
+                                                      inertiaMatrix [
+                                                        1.976344e-06 2.549048e-06 1.165621e-06
+                                                        -1.307260e-10 7.815706e-07 1.772025e-11
+                                                      ]
+                                                    }
+                                                  }
+                                                }
+                                                HingeJoint {
+                                                  jointParameters HingeJointParameters {
+                                                    axis 0.000000 1.000000 0.000000
+                                                    anchor 0.023958 0.000500 -0.135272
+                                                  }
+                                                  device [
+                                                    RotationalMotor {
+                                                      name "r_f_bar-3"
+                                                      maxTorque 10000
+                                                    }
+                                                    PositionSensor {
+                                                      name "r_f_bar-3_sensor"
+                                                    }
+                                                  ]
+                                                  endPoint Solid {
+                                                    translation 0.023958 0.000500 -0.135272
+                                                    children [
+                                                      DEF r_f_bar-3_visual CadShape {
+                                                        url "v4_pro_arm\meshes\r_f_bar-3.obj"
+                                                      }
+                                                    ]
+                                                    name "r_f_bar-3"
+                                                    boundingObject DEF r_f_bar-3 Mesh {
+                                                      url "v4_pro_arm\meshes\r_f_bar-3.obj"
+                                                    }
+                                                    physics Physics {
+                                                      density -1
+                                                      mass 0.009131
+                                                      centerOfMass [ -0.001687 -0.000055 -0.027230 ]
+                                                      inertiaMatrix [
+                                                        2.107638e-06 1.597974e-06 6.745155e-07
+                                                        2.096218e-14 -1.595585e-07 1.965181e-12
+                                                      ]
+                                                    }
+                                                  }
+                                                }
+                                                HingeJoint {
+                                                  jointParameters HingeJointParameters {
+                                                    axis 0.000000 -1.000000 0.000000
+                                                    anchor -0.022000 0.000500 -0.111400
+                                                  }
+                                                  device [
+                                                    RotationalMotor {
+                                                      name "r_b_bar-1"
+                                                      maxTorque 10000
+                                                    }
+                                                    PositionSensor {
+                                                      name "r_b_bar-1_sensor"
+                                                    }
+                                                  ]
+                                                  endPoint Solid {
+                                                    translation -0.022000 0.000500 -0.111400
+                                                    children [
+                                                      DEF r_b_bar-1_visual CadShape {
+                                                        url "v4_pro_arm\meshes\r_b_bar-1.obj"
+                                                      }
+                                                      HingeJoint {
+                                                        jointParameters HingeJointParameters {
+                                                          axis 0.000000 -1.000000 0.000000
+                                                          anchor -0.025438 0.000000 -0.046496
+                                                        }
+                                                        device [
+                                                          RotationalMotor {
+                                                            name "r_b_bar-2"
+                                                            maxTorque 10000
+                                                          }
+                                                          PositionSensor {
+                                                            name "r_b_bar-2_sensor"
+                                                          }
+                                                        ]
+                                                        endPoint Solid {
+                                                          translation -0.025438 0.000000 -0.046496
+                                                          children [
+                                                            DEF r_b_bar-2_visual CadShape {
+                                                              url "v4_pro_arm\meshes\r_b_bar-2.obj"
+                                                            }
+                                                            HingeJoint {
+                                                              jointParameters HingeJointParameters {
+                                                                axis 0.000000 1.000000 0.000000
+                                                                anchor 0.019155 0.000000 -0.029293
+                                                              }
+                                                              device [
+                                                                RotationalMotor {
+                                                                  name "r_b_fingers"
+                                                                  maxTorque 10000
+                                                                }
+                                                                PositionSensor {
+                                                                  name "r_b_fingers_sensor"
+                                                                }
+                                                              ]
+                                                              endPoint Solid {
+                                                                translation 0.019155 0.000000 -0.029293
+                                                                children [
+                                                                  DEF r_b_fingers_visual CadShape {
+                                                                    url "v4_pro_arm\meshes\r_b_fingers.obj"
+                                                                  }
+                                                                ]
+                                                                name "r_b_fingers"
+                                                                boundingObject DEF r_b_fingers Mesh {
+                                                                  url "v4_pro_arm\meshes\r_b_fingers.obj"
+                                                                }
+                                                                physics Physics {
+                                                                  density -1
+                                                                  mass 0.009517
+                                                                  centerOfMass [ 0.015513 0.000309 -0.013307 ]
+                                                                  inertiaMatrix [
+                                                                    1.195184e-06 1.160364e-06 5.657712e-07
+                                                                    4.332955e-11 2.847970e-07 3.118820e-10
+                                                                  ]
+                                                                }
+                                                              }
+                                                            }
+                                                          ]
+                                                          name "r_b_bar-2"
+                                                          boundingObject DEF r_b_bar-2 Mesh {
+                                                            url "v4_pro_arm\meshes\r_b_bar-2.obj"
+                                                          }
+                                                          physics Physics {
+                                                            density -1
+                                                            mass 0.003398
+                                                            centerOfMass [ 0.007832 0.000000 -0.014753 ]
+                                                            inertiaMatrix [
+                                                              4.228045e-07 4.352055e-07 2.584745e-07
+                                                              1.274361e-11 1.777090e-07 1.017286e-11
+                                                            ]
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                    name "r_b_bar-1"
+                                                    boundingObject DEF r_b_bar-1 Mesh {
+                                                      url "v4_pro_arm\meshes\r_b_bar-1.obj"
+                                                    }
+                                                    physics Physics {
+                                                      density -1
+                                                      mass 0.009476
+                                                      centerOfMass [ -0.007253 -0.000007 -0.010524 ]
+                                                      inertiaMatrix [
+                                                        1.976344e-06 2.549048e-06 1.165621e-06
+                                                        -1.307260e-10 -7.815706e-07 -1.772025e-11
+                                                      ]
+                                                    }
+                                                  }
+                                                }
+                                                HingeJoint {
+                                                  jointParameters HingeJointParameters {
+                                                    axis 0.000000 -1.000000 0.000000
+                                                    anchor -0.023958 0.000500 -0.135272
+                                                  }
+                                                  device [
+                                                    RotationalMotor {
+                                                      name "r_b_bar-3"
+                                                      maxTorque 10000
+                                                    }
+                                                    PositionSensor {
+                                                      name "r_b_bar-3_sensor"
+                                                    }
+                                                  ]
+                                                  endPoint Solid {
+                                                    translation -0.023958 0.000500 -0.135272
+                                                    children [
+                                                      DEF r_b_bar-3_visual CadShape {
+                                                        url "v4_pro_arm\meshes\r_b_bar-3.obj"
+                                                      }
+                                                    ]
+                                                    name "r_b_bar-3"
+                                                    boundingObject DEF r_b_bar-3 Mesh {
+                                                      url "v4_pro_arm\meshes\r_b_bar-3.obj"
+                                                    }
+                                                    physics Physics {
+                                                      density -1
+                                                      mass 0.009131
+                                                      centerOfMass [ 0.001687 0.000055 -0.027230 ]
+                                                      inertiaMatrix [
+                                                        2.107638e-06 1.597974e-06 6.745155e-07
+                                                        2.096218e-14 1.595585e-07 -1.965181e-12
+                                                      ]
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                              name "r_hand_pitch"
+                                              boundingObject USE r_hand_pitch
+                                              physics Physics {
+                                                density -1
+                                                mass 0.128623
+                                                centerOfMass [ -0.000029 -0.000381 -0.079874 ]
+                                                inertiaMatrix [
+                                                  4.951503e-05 7.224435e-05 5.839076e-05
+                                                  2.084617e-09 1.299003e-09 3.916001e-06
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        ]
+                                        name "r_hand_roll"
+                                        boundingObject DEF r_hand_roll Mesh {
+                                          url "v4_pro_arm\meshes\r_hand_roll.obj"
+                                        }
+                                        physics Physics {
+                                          density -1
+                                          mass 0.084015
+                                          centerOfMass [ -0.001111 -0.003258 -0.013376 ]
+                                          inertiaMatrix [
+                                            2.643217e-05 4.536539e-05 3.384618e-05
+                                            -1.664597e-07 2.326138e-07 1.021561e-06
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  ]
+                                  name "r_hand_yaw"
+                                  boundingObject DEF r_hand_yaw Mesh {
+                                    url "v4_pro_arm\meshes\r_hand_yaw.obj"
+                                  }
+                                  physics Physics {
+                                    density -1
+                                    mass 0.175151
+                                    centerOfMass [ -0.002066 -0.000181 -0.050797 ]
+                                    inertiaMatrix [
+                                      2.273967e-04 1.959315e-04 9.470630e-05
+                                      -2.241473e-07 -2.244967e-06 -4.929967e-09
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                            name "r_foream"
+                            boundingObject DEF r_foream Mesh {
+                              url "v4_pro_arm\meshes\r_foream.obj"
+                            }
+                            physics Physics {
+                              density -1
+                              mass 0.223463
+                              centerOfMass [ -0.016108 -0.001427 -0.048563 ]
+                              inertiaMatrix [
+                                3.788188e-04 4.989682e-04 2.021237e-04
+                                2.319012e-07 -4.156454e-05 -1.220015e-07
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                      name "r_arm_yaw"
+                      boundingObject DEF r_arm_yaw Mesh {
+                        url "v4_pro_arm\meshes\r_arm_yaw.obj"
+                      }
+                      physics Physics {
+                        density -1
+                        mass 0.481293
+                        centerOfMass [ 0.006282 -0.001072 -0.208778 ]
+                        inertiaMatrix [
+                          1.052826e-03 1.047238e-03 3.461547e-04
+                          1.052769e-06 9.281719e-05 4.634548e-06
+                        ]
+                      }
+                    }
+                  }
+                ]
+                name "r_arm_roll"
+                boundingObject DEF r_arm_roll Mesh {
+                  url "v4_pro_arm\meshes\r_arm_roll.obj"
+                }
+                physics Physics {
+                  density -1
+                  mass 0.207468
+                  centerOfMass [ -0.007909 -0.000005 -0.046550 ]
+                  inertiaMatrix [
+                    4.574628e-04 3.641965e-04 1.745085e-04
+                    -1.151990e-08 1.031260e-05 2.076666e-08
+                  ]
+                }
+              }
+            }
+          ]
+          name "r_arm_pitch"
+          boundingObject DEF r_arm_pitch Mesh {
+            url "v4_pro_arm\meshes\r_arm_pitch.obj"
+          }
+          physics Physics {
+            density -1
+            mass 0.184136
+            centerOfMass [ -0.000828 0.022180 0.000355 ]
+            inertiaMatrix [
+              3.082072e-04 1.199565e-04 2.444209e-04
+              3.387859e-05 -4.357592e-07 2.147530e-06
+            ]
+          }
+        }
+      }
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          axis 0.000000 0.000000 -1.000000
+          anchor -0.018500 0.000000 0.488400
+        }
+        device [
+          RotationalMotor {
+            name "head_pitch_motor"
+            minPosition -1.57
+            maxPosition 1.57
+            maxTorque 10000
+          }
+          PositionSensor {
+            name "head_pitch_motor_sensor"
+          }
+        ]
+        endPoint Solid {
+          translation -0.018500 0.000000 0.488400
+          children [
+            DEF head_pitch_motor_visual CadShape {
+              url "v4_pro_arm\meshes\head_pitch_motor.obj"
+            }
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0.000000 -1.000000 0.000000
+              }
+              device [
+                RotationalMotor {
+                  name "head"
+                  minPosition -0.52
+                  maxPosition 0.52
+                  maxTorque 10000
+                }
+                PositionSensor {
+                  name "head_sensor"
+                }
+              ]
+              endPoint Solid {
+                children [
+                  DEF head_visual CadShape {
+                    url "v4_pro_arm\meshes\head.obj"
+                  }
+                  Solid {
+                    translation 0.097449 0.017453 0.125582
+                    rotation 0.000000 1.000000 0.000000 0.488692
+                    children [
+                      DEF head_camera_visual CadShape {
+                        url "v4_pro_arm\meshes\head_camera.obj"
+                      }
+                    ]
+                    name "head_camera"
+                    boundingObject DEF head_camera Mesh {
+                      url "v4_pro_arm\meshes\head_camera.obj"
+                    }
+                    physics Physics {
+                      density -1
+                      mass 0.017026
+                      centerOfMass [ -0.006300 -0.016049 -0.000049 ]
+                      inertiaMatrix [
+                        1.091826e-05 8.571790e-07 1.028699e-05
+                        -1.053544e-07 -1.058715e-08 -1.640187e-08
+                      ]
+                    }
+                  }
+                ]
+                name "head"
+                boundingObject DEF head Mesh {
+                  url "v4_pro_arm\meshes\head.obj"
+                }
+                physics Physics {
+                  density -1
+                  mass 0.604629
+                  centerOfMass [ 0.027054 -0.000611 0.108993 ]
+                  inertiaMatrix [
+                    2.209117e-03 2.158000e-03 1.938550e-03
+                    4.490848e-06 4.093912e-04 1.357568e-05
+                  ]
+                }
+              }
+            }
+          ]
+          name "head_pitch_motor"
+          boundingObject DEF head_pitch_motor Mesh {
+            url "v4_pro_arm\meshes\head_pitch_motor.obj"
+          }
+          physics Physics {
+            density -1
+            mass 0.073699
+            centerOfMass [ 0.000022 0.006049 -0.010524 ]
+            inertiaMatrix [
+              3.673481e-05 4.135111e-05 3.682825e-05
+              6.736198e-08 -2.371373e-08 -7.394655e-06
+            ]
+          }
+        }
+      }
+      SliderJoint {
+        jointParameters JointParameters {
+          axis 0.000000 0.000000 1.000000
+        }
+        device [
+          LinearMotor {
+            name "chassis"
+            minPosition -0.6
+            maxForce 10000
+          }
+          PositionSensor {
+            name "chassis_sensor"
+          }
+        ]
+        endPoint Solid {
+          translation -0.208425 0.000000 -0.454500
+          children [
+            DEF chassis_visual CadShape {
+              url "v4_pro_arm\meshes\chassis.obj"
+            }
+          ]
+          name "chassis"
+          boundingObject DEF chassis Mesh {
+            url "v4_pro_arm\meshes\chassis.obj"
+          }
+          physics Physics {
+            density -1
+            mass 25.795207
+            centerOfMass [ -0.110381 0.003432 0.301013 ]
+            inertiaMatrix [
+              5.370528e-01 5.120114e-01 5.321292e-01
+              -2.873237e-04 7.174737e-05 -4.987382e-05
+            ]
+          }
+        }
+      }
+      Solid {
+        translation 0.115076 0.017500 0.275872
+        rotation 0.000000 1.000000 0.000000 0.855211
+        children [
+          DEF camera_torso_visual CadShape {
+            url "v4_pro_arm\meshes\camera_torso.obj"
+          }
+        ]
+        name "camera_torso"
+        boundingObject DEF camera_torso Mesh {
+          url "v4_pro_arm\meshes\camera_torso.obj"
+        }
+        physics Physics {
+          density -1
+          mass 0.017404
+          centerOfMass [ -0.006295 -0.016136 -0.000627 ]
+          inertiaMatrix [
+            1.145126e-05 1.013584e-06 1.068081e-05
+            -1.068653e-07 2.155318e-08 -9.980836e-09
+          ]
+        }
+      }
+    ]
+    name IS name
+    boundingObject DEF urdf_arm Mesh {
+      url "v4_pro_arm\meshes\urdf_arm.obj"
+    }
+    physics Physics {
+      density -1
+      mass 5.140394
+      centerOfMass [ -0.017488 0.001799 0.210013 ]
+      inertiaMatrix [
+        4.992224e-02 3.738068e-02 3.306054e-02
+        -1.457371e-06 9.414797e-04 -1.041448e-05
+      ]
+    }
+  }
+}
