@@ -2,7 +2,7 @@
 # license: Apache License 2.0
 # license url: http://www.apache.org/licenses/LICENSE-2.0
 # This is a proto file for Webots for the urdf_arm
-# Extracted from: D:\project\webots_flask_server_http\v4_pro_arm\urdf\urdf_arm.urdf
+# Extracted from: /home/rebot801/Wangwei/develop/webots_flask_server_http/v4_pro_arm/urdf/urdf_arm.urdf
 
 PROTO urdf_arm [
   field  SFVec3f     translation     0 0 0
@@ -27,7 +27,7 @@ PROTO urdf_arm [
     selfCollision IS selfCollision
     children [
       DEF urdf_arm_visual CadShape {
-        url "v4_pro_arm\meshes\urdf_arm.obj"
+        url "meshes/urdf_arm.obj"
       }
       HingeJoint {
         jointParameters HingeJointParameters {
@@ -50,7 +50,7 @@ PROTO urdf_arm [
           translation -0.017500 0.292700 0.310396
           children [
             DEF l_arm_pitch_visual CadShape {
-              url "v4_pro_arm\meshes\l_arm_pitch.obj"
+              url "meshes/l_arm_pitch.obj"
             }
             HingeJoint {
               jointParameters HingeJointParameters {
@@ -70,7 +70,7 @@ PROTO urdf_arm [
               endPoint Solid {
                 children [
                   DEF l_arm_roll_visual CadShape {
-                    url "v4_pro_arm\meshes\l_arm_roll.obj"
+                    url "meshes/l_arm_roll.obj"
                   }
                   HingeJoint {
                     jointParameters HingeJointParameters {
@@ -91,7 +91,7 @@ PROTO urdf_arm [
                     endPoint Solid {
                       children [
                         DEF l_arm_yaw_visual CadShape {
-                          url "v4_pro_arm\meshes\l_arm_yaw.obj"
+                          url "meshes/l_arm_yaw.obj"
                         }
                         HingeJoint {
                           jointParameters HingeJointParameters {
@@ -113,7 +113,7 @@ PROTO urdf_arm [
                             translation 0.020000 0.000000 -0.282596
                             children [
                               DEF l_foream_visual CadShape {
-                                url "v4_pro_arm\meshes\l_foream.obj"
+                                url "meshes/l_foream.obj"
                               }
                               HingeJoint {
                                 jointParameters HingeJointParameters {
@@ -136,7 +136,7 @@ PROTO urdf_arm [
                                   translation -0.020000 0.000000 -0.127037
                                   children [
                                     DEF l_hand_yaw_visual CadShape {
-                                      url "v4_pro_arm\meshes\l_hand_yaw.obj"
+                                      url "meshes/l_hand_yaw.obj"
                                     }
                                     HingeJoint {
                                       jointParameters HingeJointParameters {
@@ -158,7 +158,7 @@ PROTO urdf_arm [
                                         translation 0.000200 0.000000 -0.106463
                                         children [
                                           DEF l_hand_roll_visual CadShape {
-                                            url "v4_pro_arm\meshes\l_hand_roll.obj"
+                                            url "meshes/l_hand_roll.obj"
                                           }
                                           HingeJoint {
                                             jointParameters HingeJointParameters {
@@ -181,7 +181,7 @@ PROTO urdf_arm [
                                               translation 0.000000 0.000000 -0.021000
                                               children [
                                                 DEF r_hand_pitch_visual CadShape {
-                                                  url "v4_pro_arm\meshes\r_hand_pitch.obj"
+                                                  url "meshes/r_hand_pitch.obj"
                                                 }
                                                 HingeJoint {
                                                   jointParameters HingeJointParameters {
@@ -201,7 +201,7 @@ PROTO urdf_arm [
                                                     translation 0.022200 0.584900 -0.111400
                                                     children [
                                                       DEF l_f_bar-1_visual CadShape {
-                                                        url "v4_pro_arm\meshes\l_f_bar-1.obj"
+                                                        url "meshes/l_f_bar-1.obj"
                                                       }
                                                       HingeJoint {
                                                         jointParameters HingeJointParameters {
@@ -221,7 +221,7 @@ PROTO urdf_arm [
                                                           translation 0.025438 0.000000 -0.046496
                                                           children [
                                                             DEF l_f_bar-2_visual CadShape {
-                                                              url "v4_pro_arm\meshes\l_f_bar-2.obj"
+                                                              url "meshes/l_f_bar-2.obj"
                                                             }
                                                             HingeJoint {
                                                               jointParameters HingeJointParameters {
@@ -241,12 +241,12 @@ PROTO urdf_arm [
                                                                 translation -0.019155 0.000000 -0.029293
                                                                 children [
                                                                   DEF l_f_fingers_visual CadShape {
-                                                                    url "v4_pro_arm\meshes\l_f_fingers.obj"
+                                                                    url "meshes/l_f_fingers.obj"
                                                                   }
                                                                 ]
                                                                 name "l_f_fingers"
                                                                 boundingObject DEF l_f_fingers Mesh {
-                                                                  url "v4_pro_arm\meshes\l_f_fingers.obj"
+                                                                  url "meshes/l_f_fingers.obj"
                                                                 }
                                                                 physics Physics {
                                                                   density -1
@@ -262,7 +262,7 @@ PROTO urdf_arm [
                                                           ]
                                                           name "l_f_bar-2"
                                                           boundingObject DEF l_f_bar-2 Mesh {
-                                                            url "v4_pro_arm\meshes\l_f_bar-2.obj"
+                                                            url "meshes/l_f_bar-2.obj"
                                                           }
                                                           physics Physics {
                                                             density -1
@@ -278,7 +278,7 @@ PROTO urdf_arm [
                                                     ]
                                                     name "l_f_bar-1"
                                                     boundingObject DEF l_f_bar-1 Mesh {
-                                                      url "v4_pro_arm\meshes\l_f_bar-1.obj"
+                                                      url "meshes/l_f_bar-1.obj"
                                                     }
                                                     physics Physics {
                                                       density -1
@@ -309,12 +309,12 @@ PROTO urdf_arm [
                                                     translation 0.024158 0.584900 -0.135272
                                                     children [
                                                       DEF l_f_bar-3_visual CadShape {
-                                                        url "v4_pro_arm\meshes\l_f_bar-3.obj"
+                                                        url "meshes/l_f_bar-3.obj"
                                                       }
                                                     ]
                                                     name "l_f_bar-3"
                                                     boundingObject DEF l_f_bar-3 Mesh {
-                                                      url "v4_pro_arm\meshes\l_f_bar-3.obj"
+                                                      url "meshes/l_f_bar-3.obj"
                                                     }
                                                     physics Physics {
                                                       density -1
@@ -345,7 +345,7 @@ PROTO urdf_arm [
                                                     translation -0.021800 0.584900 -0.111400
                                                     children [
                                                       DEF l_b_bar-1_visual CadShape {
-                                                        url "v4_pro_arm\meshes\l_b_bar-1.obj"
+                                                        url "meshes/l_b_bar-1.obj"
                                                       }
                                                       HingeJoint {
                                                         jointParameters HingeJointParameters {
@@ -365,7 +365,7 @@ PROTO urdf_arm [
                                                           translation -0.025438 0.000000 -0.046496
                                                           children [
                                                             DEF l_b_bar_2_visual CadShape {
-                                                              url "v4_pro_arm\meshes\l_b_bar_2.obj"
+                                                              url "meshes/l_b_bar_2.obj"
                                                             }
                                                             HingeJoint {
                                                               jointParameters HingeJointParameters {
@@ -385,12 +385,12 @@ PROTO urdf_arm [
                                                                 translation 0.019155 0.000000 -0.029293
                                                                 children [
                                                                   DEF l_b_fingers_visual CadShape {
-                                                                    url "v4_pro_arm\meshes\l_b_fingers.obj"
+                                                                    url "meshes/l_b_fingers.obj"
                                                                   }
                                                                 ]
                                                                 name "l_b_fingers"
                                                                 boundingObject DEF l_b_fingers Mesh {
-                                                                  url "v4_pro_arm\meshes\l_b_fingers.obj"
+                                                                  url "meshes/l_b_fingers.obj"
                                                                 }
                                                                 physics Physics {
                                                                   density -1
@@ -406,7 +406,7 @@ PROTO urdf_arm [
                                                           ]
                                                           name "l_b_bar_2"
                                                           boundingObject DEF l_b_bar_2 Mesh {
-                                                            url "v4_pro_arm\meshes\l_b_bar_2.obj"
+                                                            url "meshes/l_b_bar_2.obj"
                                                           }
                                                           physics Physics {
                                                             density -1
@@ -422,7 +422,7 @@ PROTO urdf_arm [
                                                     ]
                                                     name "l_b_bar-1"
                                                     boundingObject DEF l_b_bar-1 Mesh {
-                                                      url "v4_pro_arm\meshes\l_b_bar-1.obj"
+                                                      url "meshes/l_b_bar-1.obj"
                                                     }
                                                     physics Physics {
                                                       density -1
@@ -453,12 +453,12 @@ PROTO urdf_arm [
                                                     translation -0.023758 0.584900 -0.135272
                                                     children [
                                                       DEF l_b_bar_3_visual CadShape {
-                                                        url "v4_pro_arm\meshes\l_b_bar_3.obj"
+                                                        url "meshes/l_b_bar_3.obj"
                                                       }
                                                     ]
                                                     name "l_b_bar_3"
                                                     boundingObject DEF l_b_bar_3 Mesh {
-                                                      url "v4_pro_arm\meshes\l_b_bar_3.obj"
+                                                      url "meshes/l_b_bar_3.obj"
                                                     }
                                                     physics Physics {
                                                       density -1
@@ -474,7 +474,7 @@ PROTO urdf_arm [
                                               ]
                                               name "l_hand_pitch"
                                               boundingObject DEF r_hand_pitch Mesh {
-                                                url "v4_pro_arm\meshes\r_hand_pitch.obj"
+                                                url "meshes/r_hand_pitch.obj"
                                               }
                                               physics Physics {
                                                 density -1
@@ -490,7 +490,7 @@ PROTO urdf_arm [
                                         ]
                                         name "l_hand_roll"
                                         boundingObject DEF l_hand_roll Mesh {
-                                          url "v4_pro_arm\meshes\l_hand_roll.obj"
+                                          url "meshes/l_hand_roll.obj"
                                         }
                                         physics Physics {
                                           density -1
@@ -506,7 +506,7 @@ PROTO urdf_arm [
                                   ]
                                   name "l_hand_yaw"
                                   boundingObject DEF l_hand_yaw Mesh {
-                                    url "v4_pro_arm\meshes\l_hand_yaw.obj"
+                                    url "meshes/l_hand_yaw.obj"
                                   }
                                   physics Physics {
                                     density -1
@@ -522,7 +522,7 @@ PROTO urdf_arm [
                             ]
                             name "l_foream"
                             boundingObject DEF l_foream Mesh {
-                              url "v4_pro_arm\meshes\l_foream.obj"
+                              url "meshes/l_foream.obj"
                             }
                             physics Physics {
                               density -1
@@ -538,7 +538,7 @@ PROTO urdf_arm [
                       ]
                       name "l_arm_yaw"
                       boundingObject DEF l_arm_yaw Mesh {
-                        url "v4_pro_arm\meshes\l_arm_yaw.obj"
+                        url "meshes/l_arm_yaw.obj"
                       }
                       physics Physics {
                         density -1
@@ -554,7 +554,7 @@ PROTO urdf_arm [
                 ]
                 name "l_arm_roll"
                 boundingObject DEF l_arm_roll Mesh {
-                  url "v4_pro_arm\meshes\l_arm_roll.obj"
+                  url "meshes/l_arm_roll.obj"
                 }
                 physics Physics {
                   density -1
@@ -570,7 +570,7 @@ PROTO urdf_arm [
           ]
           name "l_arm_pitch"
           boundingObject DEF l_arm_pitch Mesh {
-            url "v4_pro_arm\meshes\l_arm_pitch.obj"
+            url "meshes/l_arm_pitch.obj"
           }
           physics Physics {
             density -1
@@ -604,7 +604,7 @@ PROTO urdf_arm [
           translation -0.017500 -0.292700 0.311500
           children [
             DEF r_arm_pitch_visual CadShape {
-              url "v4_pro_arm\meshes\r_arm_pitch.obj"
+              url "meshes/r_arm_pitch.obj"
             }
             HingeJoint {
               jointParameters HingeJointParameters {
@@ -624,7 +624,7 @@ PROTO urdf_arm [
               endPoint Solid {
                 children [
                   DEF r_arm_roll_visual CadShape {
-                    url "v4_pro_arm\meshes\r_arm_roll.obj"
+                    url "meshes/r_arm_roll.obj"
                   }
                   HingeJoint {
                     jointParameters HingeJointParameters {
@@ -645,7 +645,7 @@ PROTO urdf_arm [
                     endPoint Solid {
                       children [
                         DEF r_arm_yaw_visual CadShape {
-                          url "v4_pro_arm\meshes\r_arm_yaw.obj"
+                          url "meshes/r_arm_yaw.obj"
                         }
                         HingeJoint {
                           jointParameters HingeJointParameters {
@@ -667,7 +667,7 @@ PROTO urdf_arm [
                             translation 0.020000 0.000000 -0.283700
                             children [
                               DEF r_foream_visual CadShape {
-                                url "v4_pro_arm\meshes\r_foream.obj"
+                                url "meshes/r_foream.obj"
                               }
                               HingeJoint {
                                 jointParameters HingeJointParameters {
@@ -690,7 +690,7 @@ PROTO urdf_arm [
                                   translation -0.020000 0.000000 -0.127037
                                   children [
                                     DEF r_hand_yaw_visual CadShape {
-                                      url "v4_pro_arm\meshes\r_hand_yaw.obj"
+                                      url "meshes/r_hand_yaw.obj"
                                     }
                                     HingeJoint {
                                       jointParameters HingeJointParameters {
@@ -712,7 +712,7 @@ PROTO urdf_arm [
                                         translation 0.000000 0.000000 -0.106463
                                         children [
                                           DEF r_hand_roll_visual CadShape {
-                                            url "v4_pro_arm\meshes\r_hand_roll.obj"
+                                            url "meshes/r_hand_roll.obj"
                                           }
                                           HingeJoint {
                                             jointParameters HingeJointParameters {
@@ -753,7 +753,7 @@ PROTO urdf_arm [
                                                     translation 0.022000 0.000500 -0.111400
                                                     children [
                                                       DEF r_f_bar-1_visual CadShape {
-                                                        url "v4_pro_arm\meshes\r_f_bar-1.obj"
+                                                        url "meshes/r_f_bar-1.obj"
                                                       }
                                                       HingeJoint {
                                                         jointParameters HingeJointParameters {
@@ -773,7 +773,7 @@ PROTO urdf_arm [
                                                           translation 0.025438 0.000000 -0.046496
                                                           children [
                                                             DEF r_f_bar-2_visual CadShape {
-                                                              url "v4_pro_arm\meshes\r_f_bar-2.obj"
+                                                              url "meshes/r_f_bar-2.obj"
                                                             }
                                                             HingeJoint {
                                                               jointParameters HingeJointParameters {
@@ -793,12 +793,12 @@ PROTO urdf_arm [
                                                                 translation -0.019155 0.000000 -0.029293
                                                                 children [
                                                                   DEF r_f_fingers_visual CadShape {
-                                                                    url "v4_pro_arm\meshes\r_f_fingers.obj"
+                                                                    url "meshes/r_f_fingers.obj"
                                                                   }
                                                                 ]
                                                                 name "r_f_fingers"
                                                                 boundingObject DEF r_f_fingers Mesh {
-                                                                  url "v4_pro_arm\meshes\r_f_fingers.obj"
+                                                                  url "meshes/r_f_fingers.obj"
                                                                 }
                                                                 physics Physics {
                                                                   density -1
@@ -814,7 +814,7 @@ PROTO urdf_arm [
                                                           ]
                                                           name "r_f_bar-2"
                                                           boundingObject DEF r_f_bar-2 Mesh {
-                                                            url "v4_pro_arm\meshes\r_f_bar-2.obj"
+                                                            url "meshes/r_f_bar-2.obj"
                                                           }
                                                           physics Physics {
                                                             density -1
@@ -830,7 +830,7 @@ PROTO urdf_arm [
                                                     ]
                                                     name "r_f_bar-1"
                                                     boundingObject DEF r_f_bar-1 Mesh {
-                                                      url "v4_pro_arm\meshes\r_f_bar-1.obj"
+                                                      url "meshes/r_f_bar-1.obj"
                                                     }
                                                     physics Physics {
                                                       density -1
@@ -861,12 +861,12 @@ PROTO urdf_arm [
                                                     translation 0.023958 0.000500 -0.135272
                                                     children [
                                                       DEF r_f_bar-3_visual CadShape {
-                                                        url "v4_pro_arm\meshes\r_f_bar-3.obj"
+                                                        url "meshes/r_f_bar-3.obj"
                                                       }
                                                     ]
                                                     name "r_f_bar-3"
                                                     boundingObject DEF r_f_bar-3 Mesh {
-                                                      url "v4_pro_arm\meshes\r_f_bar-3.obj"
+                                                      url "meshes/r_f_bar-3.obj"
                                                     }
                                                     physics Physics {
                                                       density -1
@@ -897,7 +897,7 @@ PROTO urdf_arm [
                                                     translation -0.022000 0.000500 -0.111400
                                                     children [
                                                       DEF r_b_bar-1_visual CadShape {
-                                                        url "v4_pro_arm\meshes\r_b_bar-1.obj"
+                                                        url "meshes/r_b_bar-1.obj"
                                                       }
                                                       HingeJoint {
                                                         jointParameters HingeJointParameters {
@@ -917,7 +917,7 @@ PROTO urdf_arm [
                                                           translation -0.025438 0.000000 -0.046496
                                                           children [
                                                             DEF r_b_bar-2_visual CadShape {
-                                                              url "v4_pro_arm\meshes\r_b_bar-2.obj"
+                                                              url "meshes/r_b_bar-2.obj"
                                                             }
                                                             HingeJoint {
                                                               jointParameters HingeJointParameters {
@@ -937,12 +937,12 @@ PROTO urdf_arm [
                                                                 translation 0.019155 0.000000 -0.029293
                                                                 children [
                                                                   DEF r_b_fingers_visual CadShape {
-                                                                    url "v4_pro_arm\meshes\r_b_fingers.obj"
+                                                                    url "meshes/r_b_fingers.obj"
                                                                   }
                                                                 ]
                                                                 name "r_b_fingers"
                                                                 boundingObject DEF r_b_fingers Mesh {
-                                                                  url "v4_pro_arm\meshes\r_b_fingers.obj"
+                                                                  url "meshes/r_b_fingers.obj"
                                                                 }
                                                                 physics Physics {
                                                                   density -1
@@ -958,7 +958,7 @@ PROTO urdf_arm [
                                                           ]
                                                           name "r_b_bar-2"
                                                           boundingObject DEF r_b_bar-2 Mesh {
-                                                            url "v4_pro_arm\meshes\r_b_bar-2.obj"
+                                                            url "meshes/r_b_bar-2.obj"
                                                           }
                                                           physics Physics {
                                                             density -1
@@ -974,7 +974,7 @@ PROTO urdf_arm [
                                                     ]
                                                     name "r_b_bar-1"
                                                     boundingObject DEF r_b_bar-1 Mesh {
-                                                      url "v4_pro_arm\meshes\r_b_bar-1.obj"
+                                                      url "meshes/r_b_bar-1.obj"
                                                     }
                                                     physics Physics {
                                                       density -1
@@ -1005,12 +1005,12 @@ PROTO urdf_arm [
                                                     translation -0.023958 0.000500 -0.135272
                                                     children [
                                                       DEF r_b_bar-3_visual CadShape {
-                                                        url "v4_pro_arm\meshes\r_b_bar-3.obj"
+                                                        url "meshes/r_b_bar-3.obj"
                                                       }
                                                     ]
                                                     name "r_b_bar-3"
                                                     boundingObject DEF r_b_bar-3 Mesh {
-                                                      url "v4_pro_arm\meshes\r_b_bar-3.obj"
+                                                      url "meshes/r_b_bar-3.obj"
                                                     }
                                                     physics Physics {
                                                       density -1
@@ -1040,7 +1040,7 @@ PROTO urdf_arm [
                                         ]
                                         name "r_hand_roll"
                                         boundingObject DEF r_hand_roll Mesh {
-                                          url "v4_pro_arm\meshes\r_hand_roll.obj"
+                                          url "meshes/r_hand_roll.obj"
                                         }
                                         physics Physics {
                                           density -1
@@ -1056,7 +1056,7 @@ PROTO urdf_arm [
                                   ]
                                   name "r_hand_yaw"
                                   boundingObject DEF r_hand_yaw Mesh {
-                                    url "v4_pro_arm\meshes\r_hand_yaw.obj"
+                                    url "meshes/r_hand_yaw.obj"
                                   }
                                   physics Physics {
                                     density -1
@@ -1072,7 +1072,7 @@ PROTO urdf_arm [
                             ]
                             name "r_foream"
                             boundingObject DEF r_foream Mesh {
-                              url "v4_pro_arm\meshes\r_foream.obj"
+                              url "meshes/r_foream.obj"
                             }
                             physics Physics {
                               density -1
@@ -1088,7 +1088,7 @@ PROTO urdf_arm [
                       ]
                       name "r_arm_yaw"
                       boundingObject DEF r_arm_yaw Mesh {
-                        url "v4_pro_arm\meshes\r_arm_yaw.obj"
+                        url "meshes/r_arm_yaw.obj"
                       }
                       physics Physics {
                         density -1
@@ -1104,7 +1104,7 @@ PROTO urdf_arm [
                 ]
                 name "r_arm_roll"
                 boundingObject DEF r_arm_roll Mesh {
-                  url "v4_pro_arm\meshes\r_arm_roll.obj"
+                  url "meshes/r_arm_roll.obj"
                 }
                 physics Physics {
                   density -1
@@ -1120,7 +1120,7 @@ PROTO urdf_arm [
           ]
           name "r_arm_pitch"
           boundingObject DEF r_arm_pitch Mesh {
-            url "v4_pro_arm\meshes\r_arm_pitch.obj"
+            url "meshes/r_arm_pitch.obj"
           }
           physics Physics {
             density -1
@@ -1153,7 +1153,7 @@ PROTO urdf_arm [
           translation -0.018500 0.000000 0.488400
           children [
             DEF head_pitch_motor_visual CadShape {
-              url "v4_pro_arm\meshes\head_pitch_motor.obj"
+              url "meshes/head_pitch_motor.obj"
             }
             HingeJoint {
               jointParameters HingeJointParameters {
@@ -1173,19 +1173,19 @@ PROTO urdf_arm [
               endPoint Solid {
                 children [
                   DEF head_visual CadShape {
-                    url "v4_pro_arm\meshes\head.obj"
+                    url "meshes/head.obj"
                   }
                   Solid {
                     translation 0.097449 0.017453 0.125582
                     rotation 0.000000 1.000000 0.000000 0.488692
                     children [
                       DEF head_camera_visual CadShape {
-                        url "v4_pro_arm\meshes\head_camera.obj"
+                        url "meshes/head_camera.obj"
                       }
                     ]
                     name "head_camera"
                     boundingObject DEF head_camera Mesh {
-                      url "v4_pro_arm\meshes\head_camera.obj"
+                      url "meshes/head_camera.obj"
                     }
                     physics Physics {
                       density -1
@@ -1200,7 +1200,7 @@ PROTO urdf_arm [
                 ]
                 name "head"
                 boundingObject DEF head Mesh {
-                  url "v4_pro_arm\meshes\head.obj"
+                  url "meshes/head.obj"
                 }
                 physics Physics {
                   density -1
@@ -1216,7 +1216,7 @@ PROTO urdf_arm [
           ]
           name "head_pitch_motor"
           boundingObject DEF head_pitch_motor Mesh {
-            url "v4_pro_arm\meshes\head_pitch_motor.obj"
+            url "meshes/head_pitch_motor.obj"
           }
           physics Physics {
             density -1
@@ -1247,12 +1247,12 @@ PROTO urdf_arm [
           translation -0.208425 0.000000 -0.454500
           children [
             DEF chassis_visual CadShape {
-              url "v4_pro_arm\meshes\chassis.obj"
+              url "meshes/chassis.obj"
             }
           ]
           name "chassis"
           boundingObject DEF chassis Mesh {
-            url "v4_pro_arm\meshes\chassis.obj"
+            url "meshes/chassis.obj"
           }
           physics Physics {
             density -1
@@ -1270,12 +1270,12 @@ PROTO urdf_arm [
         rotation 0.000000 1.000000 0.000000 0.855211
         children [
           DEF camera_torso_visual CadShape {
-            url "v4_pro_arm\meshes\camera_torso.obj"
+            url "meshes/camera_torso.obj"
           }
         ]
         name "camera_torso"
         boundingObject DEF camera_torso Mesh {
-          url "v4_pro_arm\meshes\camera_torso.obj"
+          url "meshes/camera_torso.obj"
         }
         physics Physics {
           density -1
@@ -1290,7 +1290,7 @@ PROTO urdf_arm [
     ]
     name IS name
     boundingObject DEF urdf_arm Mesh {
-      url "v4_pro_arm\meshes\urdf_arm.obj"
+      url "meshes/urdf_arm.obj"
     }
     physics Physics {
       density -1

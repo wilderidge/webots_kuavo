@@ -17,6 +17,13 @@ class MyCustomRobot(Robot):
         self.timestep = 16 # Use PR2's timestep
         self.verbose = verbose
         self.current_angle_rad = 0.0 # Keep track of robot's orientation in radians
+        
+        # 新增：误差校验和纠偏参数
+        self.position_error_threshold = 0.05  # 位置误差阈值(米)
+        self.angle_error_threshold = 0.1      # 角度误差阈值(弧度)
+        self.correction_factor = 0.5          # 纠偏因子(0-1)
+        self.max_correction_speed = 1.0       # 最大纠偏速度
+        self.enable_error_correction = True   # 是否启用误差纠偏
 
         # PR2 specific wheel motors and sensors
         self.wheel_motors = {}
@@ -197,11 +204,15 @@ class MyCustomRobot(Robot):
         return (a < b + tolerance) and (a > b - tolerance)
 
     def rotate_angle(self, angle_radians):
-        """ Rotates the robot around itself of a given angle [rad]. """
-        # ... (此部分保持不变，包括 current_angle_rad 更新) ...
+        """ Rotates the robot around itself of a given angle [rad] with real-time error correction. """
         if self.verbose:
-            print(f"Rotating by {math.degrees(angle_radians):.2f} degrees")
+            print(f"Rotating by {math.degrees(angle_radians):.2f} degrees with error correction")
 
+        # 记录起始角度和目标角度
+        start_angle = self.get_current_angle_from_imu()
+        target_angle = start_angle + angle_radians
+        target_angle = self.normalize_angle(target_angle)
+        
         self.stop_wheels()
         self.set_rotation_wheels_angles(3.0 * math.pi / 4.0, math.pi / 4.0, -3.0 * math.pi / 4.0, -math.pi / 4.0, True)
 
@@ -210,52 +221,178 @@ class MyCustomRobot(Robot):
 
         initial_wheel0_position = self.wheel_sensors["fl_caster_l_wheel_joint"].getValue() if self.wheel_sensors.get("fl_caster_l_wheel_joint") else 0.0
         expected_travel_distance = abs(angle_radians * 0.5 * (self.WHEELS_DISTANCE + self.SUB_WHEELS_DISTANCE))
+        correction_count = 0
 
         while self.step(self.timestep) != -1:
             if not self.wheel_sensors.get("fl_caster_l_wheel_joint"):
                 break
+                
             wheel0_position = self.wheel_sensors["fl_caster_l_wheel_joint"].getValue()
             wheel0_travel_distance = abs(self.WHEEL_RADIUS * (wheel0_position - initial_wheel0_position))
 
             if wheel0_travel_distance >= expected_travel_distance - self.DISTANCE_THRESHOLD:
                 break
 
+            # 实时角度误差检测和纠偏
+            if self.enable_error_correction and correction_count % 8 == 0:  # 每8个周期检查一次
+                current_angle = self.get_current_angle_from_imu()
+                
+                # 计算当前应该达到的角度（基于行驶距离）
+                progress_ratio = wheel0_travel_distance / expected_travel_distance
+                expected_current_angle = start_angle + angle_radians * progress_ratio
+                expected_current_angle = self.normalize_angle(expected_current_angle)
+                
+                # 计算角度误差
+                angle_error = self.normalize_angle(current_angle - expected_current_angle)
+                
+                if self.verbose and abs(angle_error) > self.angle_error_threshold:
+                    print(f"旋转误差检测 - 角度误差: {math.degrees(angle_error):.2f}°")
+                
+                # 如果角度误差超过阈值，进行纠偏
+                if abs(angle_error) > self.angle_error_threshold:
+                    # 计算纠偏速度
+                    correction_speed = min(abs(angle_error) * self.correction_factor, self.max_correction_speed)
+                    
+                    # 根据误差方向调整旋转速度
+                    if angle_error > 0:  # 实际角度大于期望角度，需要反向纠偏
+                        corrected_speed = max_wheel_speed * 0.8  # 减速纠偏
+                    else:  # 实际角度小于期望角度，需要加速纠偏
+                        corrected_speed = max_wheel_speed * 1.2  # 加速纠偏
+                        corrected_speed = min(corrected_speed, self.MAX_WHEEL_SPEED) if angle_radians > 0 else max(corrected_speed, -self.MAX_WHEEL_SPEED)
+                    
+                    self.set_wheels_speed(corrected_speed)
+                    
+                    if self.verbose:
+                        print(f"应用旋转纠偏 - 纠偏速度: {corrected_speed:.2f}")
+                    
+                    # 纠偏几个周期后恢复
+                    for _ in range(3):
+                        if self.step(self.timestep) == -1:
+                            break
+                    
+                    # 恢复正常旋转速度
+                    self.set_wheels_speed(max_wheel_speed)
+            
+            correction_count += 1
+            
+            # 接近目标时减速
             if expected_travel_distance - wheel0_travel_distance < 0.1 * expected_travel_distance and expected_travel_distance > 0.01:
                 self.set_wheels_speed(0.2 * max_wheel_speed)
 
         self.set_rotation_wheels_angles(0.0, 0.0, 0.0, 0.0, True)
         self.stop_wheels()
+        
+        # 更新内部角度记录
         self.current_angle_rad = (self.current_angle_rad + angle_radians) % (2 * math.pi)
         if self.current_angle_rad < 0:
             self.current_angle_rad += 2 * math.pi
+            
+        # 最终角度验证
+        final_angle = self.get_current_angle_from_imu()
+        final_angle_error = self.normalize_angle(final_angle - target_angle)
+        
         if self.verbose:
-            print(f"Robot current absolute angle: {math.degrees(self.current_angle_rad):.2f} degrees")
+            print(f"旋转完成 - 目标角度: {math.degrees(target_angle):.2f}°, 实际角度: {math.degrees(final_angle):.2f}°")
+            print(f"最终角度误差: {math.degrees(final_angle_error):.2f}°")
+            if abs(final_angle_error) > self.angle_error_threshold:
+                print(f"警告：最终角度误差较大！")
 
 
     def go_forward(self, distance):
-        """ Moves the robot forward for a given distance [m]. """
-        # ... (此部分保持不变) ...
+        """ Moves the robot forward for a given distance [m] with real-time error correction. """
         if self.verbose:
-            print(f"Moving forward by {distance:.2f} meters")
+            print(f"Moving forward by {distance:.2f} meters with error correction")
 
-        max_wheel_speed = self.MAX_WHEEL_SPEED if distance > 0 else -self.MAX_WHEEL_SPEED
+        # 记录起始位置和目标位置
+        start_position = self.get_current_position()
+        target_distance = abs(distance)
+        direction = 1 if distance > 0 else -1
+        
+        # 计算目标位置
+        target_position = [
+            start_position[0] + distance * math.cos(self.current_angle_rad),
+            start_position[1] + distance * math.sin(self.current_angle_rad)
+        ]
+        
+        max_wheel_speed = self.MAX_WHEEL_SPEED * direction
         self.set_wheels_speed(max_wheel_speed)
-
+        
         initial_wheel0_position = self.wheel_sensors["fl_caster_l_wheel_joint"].getValue() if self.wheel_sensors.get("fl_caster_l_wheel_joint") else 0.0
-
+        correction_count = 0
+        
         while self.step(self.timestep) != -1:
             if not self.wheel_sensors.get("fl_caster_l_wheel_joint"):
                 break
+                
+            # 当前位置和行驶距离
+            current_position = self.get_current_position()
             wheel0_position = self.wheel_sensors["fl_caster_l_wheel_joint"].getValue()
             wheel0_travel_distance = abs(self.WHEEL_RADIUS * (wheel0_position - initial_wheel0_position))
-
-            if wheel0_travel_distance >= abs(distance) - self.DISTANCE_THRESHOLD:
+            
+            # 检查是否到达目标距离
+            if wheel0_travel_distance >= target_distance - self.DISTANCE_THRESHOLD:
                 break
-
-            if abs(distance) - wheel0_travel_distance < 0.1 * abs(distance) and abs(distance) > 0.01:
+            
+            # 实时误差检测和纠偏
+            if self.enable_error_correction and correction_count % 10 == 0:  # 每10个周期检查一次
+                # 计算实际到目标的距离
+                actual_distance_to_target = self.calculate_distance(current_position, target_position)
+                expected_remaining_distance = target_distance - wheel0_travel_distance
+                
+                # 计算位置误差
+                position_error = abs(actual_distance_to_target - expected_remaining_distance)
+                
+                # 计算角度误差
+                current_angle = self.get_current_angle_from_imu()
+                angle_error = self.normalize_angle(current_angle - self.current_angle_rad)
+                
+                if self.verbose and (position_error > self.position_error_threshold or abs(angle_error) > self.angle_error_threshold):
+                    print(f"检测到误差 - 位置误差: {position_error:.3f}m, 角度误差: {math.degrees(angle_error):.2f}°")
+                
+                # 如果误差超过阈值，进行纠偏
+                if position_error > self.position_error_threshold or abs(angle_error) > self.angle_error_threshold:
+                    forward_correction, angular_correction = self.calculate_correction_speeds(position_error, angle_error)
+                    
+                    # 应用纠偏：调整左右轮速度差来纠正角度，调整整体速度来纠正位置
+                    base_speed = max_wheel_speed * 0.8  # 降低基础速度进行精确控制
+                    left_speed = base_speed + angular_correction
+                    right_speed = base_speed - angular_correction
+                    
+                    # 限制速度范围
+                    left_speed = max(-self.MAX_WHEEL_SPEED, min(self.MAX_WHEEL_SPEED, left_speed))
+                    right_speed = max(-self.MAX_WHEEL_SPEED, min(self.MAX_WHEEL_SPEED, right_speed))
+                    
+                    # 设置差速纠偏
+                    self.set_wheels_speeds(left_speed, left_speed, right_speed, right_speed, 
+                                         left_speed, left_speed, right_speed, right_speed)
+                    
+                    if self.verbose:
+                        print(f"应用纠偏 - 左轮速度: {left_speed:.2f}, 右轮速度: {right_speed:.2f}")
+                        
+                    # 纠偏几个周期后恢复正常速度
+                    for _ in range(5):
+                        if self.step(self.timestep) == -1:
+                            break
+                    
+                    # 恢复正常前进
+                    self.set_wheels_speed(max_wheel_speed)
+            
+            correction_count += 1
+            
+            # 接近目标时减速
+            if target_distance - wheel0_travel_distance < 0.1 * target_distance and target_distance > 0.01:
                 self.set_wheels_speed(0.1 * max_wheel_speed)
 
         self.stop_wheels()
+        
+        # 最终位置验证
+        final_position = self.get_current_position()
+        final_distance_error = self.calculate_distance(final_position, target_position)
+        
+        if self.verbose:
+            print(f"运动完成 - 最终位置误差: {final_distance_error:.3f}m")
+            if final_distance_error > self.position_error_threshold:
+                print(f"警告：最终位置误差较大！期望位置: {target_position}, 实际位置: {final_position}")
 
 
     def turn_east(self):
@@ -385,3 +522,123 @@ class MyCustomRobot(Robot):
 
         if self.verbose:
             print("Arms retracted to safe posture.")
+
+    def get_current_position(self):
+        """获取当前GPS位置"""
+        if self.gps:
+            position = self.gps.getValues()
+            return [position[0], position[1]]  # 返回[x, y]
+        return [0.0, 0.0]
+    
+    def get_current_angle_from_imu(self):
+        """从IMU获取当前角度(弧度)"""
+        if self.iu:
+            # IMU返回的是旋转矩阵，需要转换为角度
+            rotation_matrix = self.iu.getRollPitchYaw()
+            return rotation_matrix[2]  # Yaw角度
+        return self.current_angle_rad
+    
+    def calculate_distance(self, pos1, pos2):
+        """计算两点间距离"""
+        return math.sqrt((pos1[0] - pos2[0])**2 + (pos1[1] - pos2[1])**2)
+    
+    def normalize_angle(self, angle):
+        """将角度规范化到[-π, π]范围"""
+        while angle > math.pi:
+            angle -= 2 * math.pi
+        while angle < -math.pi:
+            angle += 2 * math.pi
+        return angle
+    
+    def calculate_correction_speeds(self, position_error, angle_error):
+        """根据误差计算纠偏速度"""
+        # 位置纠偏：根据距离误差调整前进速度
+        forward_correction = min(position_error * self.correction_factor, self.max_correction_speed)
+        
+        # 角度纠偏：根据角度误差调整转向速度
+        angular_correction = min(abs(angle_error) * self.correction_factor, self.max_correction_speed)
+        if angle_error < 0:
+            angular_correction = -angular_correction
+            
+        return forward_correction, angular_correction
+
+    def set_error_correction_parameters(self, position_threshold=0.05, angle_threshold=0.1, 
+                                       correction_factor=0.5, max_correction_speed=1.0, enable=True):
+        """设置误差纠偏参数
+        
+        Args:
+            position_threshold: 位置误差阈值(米)
+            angle_threshold: 角度误差阈值(弧度)
+            correction_factor: 纠偏因子(0-1)，越大纠偏越强
+            max_correction_speed: 最大纠偏速度
+            enable: 是否启用误差纠偏
+        """
+        self.position_error_threshold = position_threshold
+        self.angle_error_threshold = angle_threshold
+        self.correction_factor = correction_factor
+        self.max_correction_speed = max_correction_speed
+        self.enable_error_correction = enable
+        
+        if self.verbose:
+            print(f"误差纠偏参数已更新:")
+            print(f"  位置误差阈值: {position_threshold:.3f}m")
+            print(f"  角度误差阈值: {math.degrees(angle_threshold):.2f}°")
+            print(f"  纠偏因子: {correction_factor}")
+            print(f"  最大纠偏速度: {max_correction_speed}")
+            print(f"  启用状态: {enable}")
+
+    def go_to_position(self, target_x, target_y, tolerance=0.05):
+        """精确移动到指定位置，带实时纠偏
+        
+        Args:
+            target_x: 目标X坐标
+            target_y: 目标Y坐标
+            tolerance: 位置容差(米)
+        """
+        if self.verbose:
+            print(f"精确移动到位置 ({target_x:.2f}, {target_y:.2f})")
+        
+        max_iterations = 50  # 最大迭代次数，避免无限循环
+        iteration = 0
+        
+        while iteration < max_iterations:
+            current_pos = self.get_current_position()
+            current_angle = self.get_current_angle_from_imu()
+            
+            # 计算到目标的距离和角度
+            dx = target_x - current_pos[0]
+            dy = target_y - current_pos[1]
+            distance_to_target = math.sqrt(dx*dx + dy*dy)
+            
+            # 检查是否到达目标
+            if distance_to_target <= tolerance:
+                if self.verbose:
+                    print(f"已到达目标位置，最终误差: {distance_to_target:.3f}m")
+                break
+            
+            # 计算需要转向的角度
+            target_angle = math.atan2(dy, dx)
+            angle_diff = self.normalize_angle(target_angle - current_angle)
+            
+            # 如果角度偏差较大，先转向
+            if abs(angle_diff) > 0.1:  # 约5.7度
+                if self.verbose:
+                    print(f"调整方向，角度偏差: {math.degrees(angle_diff):.2f}°")
+                self.rotate_angle(angle_diff)
+                self.current_angle_rad = target_angle
+            
+            # 前进到目标位置
+            move_distance = min(distance_to_target, 0.5)  # 每次最多移动0.5米
+            if self.verbose:
+                print(f"前进 {move_distance:.3f}m，剩余距离: {distance_to_target:.3f}m")
+            self.go_forward(move_distance)
+            
+            iteration += 1
+            
+            # 短暂等待传感器稳定
+            self.wait(50)
+        
+        if iteration >= max_iterations:
+            current_pos = self.get_current_position()
+            final_error = math.sqrt((target_x - current_pos[0])**2 + (target_y - current_pos[1])**2)
+            print(f"警告: 达到最大迭代次数，最终位置误差: {final_error:.3f}m")

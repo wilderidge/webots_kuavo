@@ -1,0 +1,41 @@
+{
+  "robot_types": {
+    "cleaner": {
+      "name": "cleaner T20",
+      "ability_name": ["抓取", "移动", "跳动", "转动"],
+      "ability_code": ["grab", "move", "jump", "turn"],
+      "describe": "智能清洁机器人，具备多种运动能力"
+    },
+    "pr2_robot": {
+      "name": "PR2 Robot",
+      "ability_name": ["移动", "抓取", "导航", "感知"],
+      "ability_code": ["move", "grab", "navigate", "sense"],
+      "describe": "PR2双臂服务机器人，具备移动和操作能力"
+    },
+    "obstacle": {
+      "name": "障碍物",
+      "ability_name": ["静态阻挡"],
+      "ability_code": ["block"],
+      "describe": "静态障碍物，阻挡机器人路径规划"
+    },
+    "kuavo_robot": {
+      "name": "Kuavo 人形机器人",
+      "ability_name": ["行走", "平衡", "抓取", "感知"],
+      "ability_code": ["walk", "balance", "grab", "sense"],
+      "describe": "Kuavo人形双足机器人，具备复杂运动能力"
+    },
+    "unknown": {
+      "name": "未知物体",
+      "ability_name": ["未知"],
+      "ability_code": ["unknown"],
+      "describe": "未分类物体"
+    }
+  },
+  "node_name_mapping": {
+    "cleaner": ["cleaner", "clean", "清洁", "T20"],
+    "pr2_robot": ["PR2_ROBOT", "pr2", "PR2"],
+    "obstacle": ["OBSTACLE", "obstacle", "BOX", "box", "障碍"],
+    "kuavo_robot": ["KUAVO", "kuavo", "humanoid", "人形"],
+    "unknown": ["default"]
+  }
+}

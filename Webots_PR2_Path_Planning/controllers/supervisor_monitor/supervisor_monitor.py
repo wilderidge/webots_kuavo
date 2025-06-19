@@ -166,46 +166,60 @@ send_interval = 1.0 # 每秒发送一次状态更新
 
 # 优化深度图发送逻辑
 def send_camera_data():
-    if camera_dpt and camera_dpt.getRangeImage():
-        depth_data = camera_dpt.getRangeImage()
-        # 将深度数据归一化到0-255范围
-        depth_normalized = (np.array(depth_data) * 255 / 10.0).astype(np.uint8) # 假设最大深度10m
-        depth_image = Image.fromarray(depth_normalized)
-        # 处理RGB图像
-        image_data = camera_rgb.getImage()
-        # 将Webots相机图像转换为PIL图像
-        pil_image = Image.frombytes('RGBA', (camera_rgb.getWidth(), camera_rgb.getHeight()), image_data)
-        # 将图像转换为base64字符串
-        img_byte_arr = io.BytesIO()
-        pil_image.save(img_byte_arr, format='PNG')
-        img_byte_arr = img_byte_arr.getvalue()
-        encoded_image = base64.b64encode(img_byte_arr).decode('utf-8')
-        
+    # 处理RGB图像
+    if camera_rgb and camera_rgb.getImage():
         try:
+            image_data = camera_rgb.getImage()
+            # 将Webots相机图像转换为PIL图像
+            pil_image = Image.frombytes('RGBA', (camera_rgb.getWidth(), camera_rgb.getHeight()), image_data)
+            # 将图像转换为base64字符串
+            img_byte_arr = io.BytesIO()
+            pil_image.save(img_byte_arr, format='PNG')
+            img_byte_arr = img_byte_arr.getvalue()
+            encoded_image = base64.b64encode(img_byte_arr).decode('utf-8')
+            
             requests.post(CAMERA_STATUS_URL, json={'image': encoded_image})
         except requests.exceptions.RequestException as e:
-            print(f"Error sending camera data: {e}")
+            print(f"Error sending RGB camera data: {e}")
+        except Exception as e:
+            print(f"Error processing RGB camera data: {e}")
 
+    # 处理深度图像
     if camera_dpt and camera_dpt.getRangeImage():
-        # 处理深度数据中的NaN和无穷大值
-        depth_array = np.nan_to_num(np.array(depth_data), nan=0.0, posinf=0.0, neginf=0.0)
-        # 限制数值范围并转换类型
-        depth_normalized = (depth_array * 255 / 10.0).clip(0, 255).astype(np.uint8)
-        # 将深度图像数据转换为可发送格式（例如，base64 编码）
-        # 这里假设深度数据是一个一维数组，长度为宽度 * 高度
-        # 你可能需要根据实际情况调整数据处理和发送方式
-        depth_image = Image.new('L', (camera_dpt.getWidth(), camera_dpt.getHeight()))
-        depth_image.putdata(depth_data)
-        
-        img_byte_arr = io.BytesIO()
-        depth_image.save(img_byte_arr, format='PNG')
-        img_byte_arr = img_byte_arr.getvalue()
-        encoded_depth_image = base64.b64encode(img_byte_arr).decode('utf-8')
-        
         try:
-            requests.post(CAMERA_STATUS_URL, json={'depth_image': encoded_depth_image})
+            depth_data = camera_dpt.getRangeImage()
+            width = camera_dpt.getWidth()
+            height = camera_dpt.getHeight()
+            
+            # 检查深度数据是否有效
+            if depth_data and len(depth_data) == width * height:
+                # 将深度数据转换为numpy数组并重塑为2D
+                depth_array = np.array(depth_data, dtype=np.float32)
+                depth_2d = depth_array.reshape((height, width))
+                
+                # 处理深度数据中的NaN和无穷大值
+                depth_2d = np.nan_to_num(depth_2d, nan=0.0, posinf=10.0, neginf=0.0)
+                
+                # 将深度数据归一化到0-255范围
+                depth_normalized = (depth_2d * 255 / 10.0).clip(0, 255).astype(np.uint8)
+                
+                # 创建PIL图像
+                depth_image = Image.fromarray(depth_normalized, mode='L')
+                
+                # 将图像转换为base64字符串
+                img_byte_arr = io.BytesIO()
+                depth_image.save(img_byte_arr, format='PNG')
+                img_byte_arr = img_byte_arr.getvalue()
+                encoded_depth_image = base64.b64encode(img_byte_arr).decode('utf-8')
+                
+                requests.post(CAMERA_STATUS_URL, json={'depth_image': encoded_depth_image})
+            else:
+                print(f"Invalid depth data: expected {width * height} elements, got {len(depth_data) if depth_data else 0}")
+                
         except requests.exceptions.RequestException as e:
             print(f"Error sending depth camera data: {e}")
+        except Exception as e:
+            print(f"Error processing depth camera data: {e}")
 
 while supervisor.step(timestep) != -1:
     current_time = supervisor.getTime()
